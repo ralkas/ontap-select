@@ -1,0 +1,1836 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <title>Frequently asked questions</title>
+  <meta charset="utf-8">
+  <meta property="og:title" content="Frequently asked questions" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://docs.netapp.com/ontap-select/us-en/reference_faq.html" />
+	<meta property="og:description" content="Find answers to common questions about ONTAP Select." />
+  <meta property="og:image" content="https://docs.netapp.com/ontap-select/us-en/images/logo-tophat-social.png" />
+  <meta property="og:image:alt" content="NetApp Logo" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+  <meta http-equiv="encoding" content="utf-8">
+  <meta http-equiv="nss-type" content="Product Documentation"/>
+  <meta http-equiv="nss-subtype" content="User Guide"/>
+  
+  <meta name="description" content="Find answers to common questions about ONTAP Select.">
+  <meta name="keywords" content=" faq, frequently asked questions">
+  
+  
+
+  <!-- Icons -->
+  <link rel="icon" href="/ontap-select/us-en/images/favicon.ico" type="image/x-icon">
+
+  <!-- RSS Feed -->
+  
+
+  <!-- CSS Definitions: NetApp CSS should be defined after generic css -->
+
+  <!-- Elastic Search -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/searchkit/0.10.0/theme.css">
+
+  <!-- LUCI CSS Content -->
+  <link rel="stylesheet" href="/ontap-select/us-en/common/css/esb.min.css">
+  <link rel="stylesheet" href="/ontap-select/us-en/common/css/netapp-library.min.css">
+  <link rel="stylesheet" href="/ontap-select/us-en/common/css/doc.css">
+  <link rel="stylesheet" href="/ontap-select/us-en/common/css/doc-components.css">
+
+  <link rel="stylesheet" href='/ontap-select/us-en/css/na-sidebar.css' type='text/css'>
+  <link rel='stylesheet' href='/ontap-select/us-en/css/na-search.css' type='text/css'>
+  <link rel='stylesheet' href='/ontap-select/us-en/css/clouddocs.css' type='text/css'>
+
+  <!-- Font awesome seems to affect our GitHub Icon and generic "arrow box" for external links. -->
+  <link rel="stylesheet" type="text/css" href="/ontap-select/us-en/css/font-awesome.min.css">
+  <!-- <link rel="stylesheet" href="/ontap-select/us-en/css/customstyles.css"> -->
+  <!-- Controls the shadow effect for search dropdown menu -->
+  <link rel="stylesheet" href="/ontap-select/us-en/css/boxshadowproperties.css">
+
+  <!-- NetApp CSS controls the technical content -->
+  <link rel='stylesheet' href='/ontap-select/us-en/css/netapp.css' type='text/css'>
+
+  
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+  <!-- Used to import Promise for IE. Required for SearchKit -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script>
+  
+    <script src='/ontap-select/us-en/js/na-search.js'></script>
+  
+
+  
+  <link rel='stylesheet' href='/ontap-select/us-en/css/na-pagenav.css' type='text/css' id="pagenav-css">
+  <script src='/ontap-select/us-en/js/na-pagenav.js'></script>
+  
+
+  <link rel='stylesheet' href='/ontap-select/us-en/css/prism.css' type='text/css'>
+  <link rel='stylesheet' href='/ontap-select/us-en/css/prism-netapp.css' type='text/css'>
+
+  <script src='/ontap-select/us-en/js/clouddocs.js'></script>
+  <script src='/ontap-select/us-en/js/s_code_impl.js'></script>
+  <script src='/ontap-select/us-en/js/jquery.navgoco.min.js'></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src='/ontap-select/us-en/js/toc.js'></script>
+  <script src='/ontap-select/us-en/js/customscripts.js'></script>
+
+  <script>
+      $(document).ready(function() {
+          // Initialize navgoco with default options
+          $("#mysidebar").navgoco({
+              caretHtml: '',
+              accordion: true,
+              openClass: 'active', // open
+              save: false, // leave false or nav highlighting doesn't work right
+              cookie: {
+                  name: 'navgoco',
+                  expires: false,
+                  path: '/'
+              },
+              slide: {
+                  duration: 400,
+                  easing: 'swing'
+              }
+          });
+
+          $("#collapseAll").click(function(e) {
+              e.preventDefault();
+              $("#mysidebar").navgoco('toggle', false);
+          });
+
+          $("#expandAll").click(function(e) {
+              e.preventDefault();
+              $("#mysidebar").navgoco('toggle', true);
+          });
+
+      });
+
+  </script>
+  <script>
+      $(document).ready(function() {
+          $("#tg-sb-link").click(function() {
+              $("#tg-sb-sidebar").toggle();
+              $("#tg-sb-content").toggleClass('col-md-9');
+              $("#tg-sb-content").toggleClass('col-md-12');
+              $("#tg-sb-icon").toggleClass('fa-toggle-on');
+              $("#tg-sb-icon").toggleClass('fa-toggle-off');
+          });
+      });
+  </script>
+
+  <!-- Controls the i18n Browser Redirection -->
+  <script>
+    var siteLocales = [];
+    
+      siteLocales.push("us-en");
+    
+
+    standardizeUrl(siteLocales, "clouddocs.netapp.com", "https://docs.netapp.com");
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-81697994-3"></script>
+  <script>
+  if (document.location.hostname === "docs.netapp.com") {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-81697994-3');
+  }
+  </script>
+</head>
+
+
+  <body class="n-doc__component-detail">
+    <a href="#n-main-content" class="visually-hidden">Skip to main content</a>
+<div class="n-off-canvas-menu">
+  <div class="n-off-canvas-menu__menu">
+    <div class="n-off-canvas-menu__menu-inner">
+      <div class="n-off-canvas-menu__property-title"></div>
+      <ul class="n-off-canvas-menu__property-navigation-list">
+        <li class="n-off-canvas-menu__property-navigation-list-item ">
+          <a href="https://docs.netapp.com/us-en/" class="n-off-canvas-menu__property-navigation-link">
+            Home
+          </a>
+          <div class="n-off-canvas-menu__child-menu">
+            <ul class="n-menu__list">
+
+            </ul>
+          </div>
+        </li>
+      </ul>
+
+      <ul class="n-off-canvas-menu__global-navigation-list">
+         <li class="n-off-canvas-menu__global-navigation-list-header">More From NetApp</li>
+         <li class="n-off-canvas-menu__global-navigation-list-item"><a href="#" class="n-off-canvas-menu__global-navigation-link">Netapp.com</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+    <div class="n-off-canvas-menu__content-wrap">
+      <!-- Header -->
+      <header>
+  <!-- Top Hat -->
+  <div class="n-top-hat">
+    <div class="n-container">
+      <div class="n-top-hat__cross-property-nav">
+        <ul class="n-top-hat__list">
+            <li class="n-top-hat__list-item">
+              <a href="http://www.netapp.com" class="n-top-hat__link">NetApp.com</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Property Bar -->
+  <div class="n-property-bar n-property-bar--v3">
+    <div class="n-property-bar__inner-wrap">
+      <div class="n-property-bar__menu-toggle">
+        <a href="#" class="n-property-bar__menu-toggle-link"><span class="n-property-bar__menu-toggle-text">Menu</span><svg class="n-icon-bars n-property-bar__menu-toggle-icon" aria-labelledby="title">
+          <title>bars</title>
+          <use xlink:href="/ontap-select/us-en/common/svg/sprite.svg#bars"></use>
+        </svg></a>
+      </div>
+      <div class="n-property-bar__property-mark n-property-bar__property-mark--has-property-name">
+        <a class="n-property-bar__property-link" href="https://docs.netapp.com">
+          <div class="n-property-bar__logo">
+            <svg class="n-icon-netapp-mark n-property-bar__netapp-mark-icon" aria-labelledby="title">
+              <title>netapp-mark</title>
+              <use xlink:href="/ontap-select/us-en/common/svg/sprite.svg#netapp-mark"></use>
+            </svg>
+            <svg class="n-property-bar__logo-svg" aria-labelledby="title">
+              <title>NetApp</title>
+              <use xlink:href="/ontap-select/us-en/common/svg/sprite.svg#netapp-logo"></use>
+            </svg>
+          </div>
+          <h2 class="n-property-bar__property-name"></h2>
+        </a>
+      </div>
+
+      
+      <div id="search-demo-container" class="n-property-bar__search">
+        <div id="react-search"></div>
+      </div>
+      
+
+      <div id="ie-i18n-menu" class="n-property-bar__utils">
+        <ul class="n-property-navigation-bar__utils-list">
+          <li class="n-property-navigation-bar__utils-list-item ie-i18n-container">
+            <a href="#" class="n-property-navigation-bar__utils-link n-property-navigation-bar__nav-link n-property-navigation-bar__language-selector-toggle ie-i18n-link" data-menu-id="n-property-navigation-bar__menu--language-selector">
+              <span class="ie-i18n-lang">English</span>
+              <svg class="ie-i18n-icon-container" class="n-property-bar__logo-svg" aria-labelledby="title">
+                <title>globe</title>
+                <use xlink:href="/ontap-select/us-en/common/svg/sprite.svg#globe" class="n-icon-globe n-globe__icon"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="n-property-bar__menus">
+      <div id="n-property-navigation-bar__menu--language-selector" class="n-menu n-menu--v3">
+        <div class="n-language-selector-menu">
+          <div class="n-language-selector-menu__header">
+            <span class="n-language-selector-menu__title">Select Your Language</span>
+          </div>
+          <ul class="n-menu__list">
+            <li class="n-menu__list-column">
+              <ul class="n-menu__list">
+                
+                
+                
+                <li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="/ontap-select/us-en/" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
+                </li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+              </ul>
+            </li>
+          </ul>
+          <div class="menu__footer">
+            <p>Current Language: English
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+      <!-- Content -->
+      <main role="main" id="n-main-content" class="n-main-content">
+        <div class="n-container">
+  <div class="n-row">
+    <div class="n-doc n-doc__component-list">
+      <!-- Sidebar Column -->
+      
+      <div class="col-md-3" >
+          
+
+<ul id="mysidebar" class="nav">
+  
+
+  
+    <li><a href="index.html">ONTAP Select 9.7 docs</a></li>
+  
+
+  
+    <!-- Check Container -->
+    <li class="subfolders">
+      <a href="#">Concepts</a>
+      <ul>
+        
+
+  
+    <li><a href="concept_ots_overview.html">Product overview</a></li>
+  
+
+  
+    <li><a href="concept_ots_deploy.html">ONTAP Select Deploy</a></li>
+  
+
+  
+    <!-- Check Container -->
+    <li class="subfolders">
+      <a href="#">Business use cases</a>
+      <ul>
+        
+
+  
+    <li><a href="concept_usecase_overview.html">Business needs and usage scenarios</a></li>
+  
+
+  
+    <li><a href="concept_usecase_robo.html">Remote and branch office</a></li>
+  
+
+  
+    <li><a href="concept_usecase_private_cloud.html">Private cloud and data center</a></li>
+  
+
+  
+    <li><a href="concept_usecase_mc_sds.html">MetroCluster SDS</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+    <li><a href="concept_terminology.html">Terminology</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+    <!-- Check Container -->
+    <li class="subfolders">
+      <a href="#">Plan</a>
+      <ul>
+        
+
+  
+    <li><a href="concept_workflow_deploy.html">Deployment workflow</a></li>
+  
+
+  
+    <!-- Check Container -->
+    <li class="subfolders">
+      <a href="#">ONTAP Select</a>
+      <ul>
+        
+
+  
+    <li><a href="reference_plan_ots_general.html">General requirements</a></li>
+  
+
+  
+    <li><a href="reference_plan_ots_hardware.html">Hypervisor and hardware</a></li>
+  
+
+  
+    <li><a href="reference_plan_ots_storage.html">Storage and RAID</a></li>
+  
+
+  
+    <li><a href="reference_plan_ots_vnas.html">ONTAP Select vNAS</a></li>
+  
+
+  
+    <li><a href="reference_plan_ots_networking.html">Networking</a></li>
+  
+
+  
+    <li><a href="reference_plan_ots_two_node.html">Two-node clusters</a></li>
+  
+
+  
+    <li><a href="reference_plan_ots_robo.html">Remote and branch offices</a></li>
+  
+
+  
+    <li><a href="reference_plan_ots_mcc_sds.html">MetroCluster SDS</a></li>
+  
+
+  
+    <li><a href="reference_plan_ots_vcenter.html">VMware vCenter</a></li>
+  
+
+  
+    <li><a href="reference_plan_ots_plugin.html">VMware vCenter plug-in</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+    <!-- Check Container -->
+    <li class="subfolders">
+      <a href="#">ONTAP Select Deploy</a>
+      <ul>
+        
+
+  
+    <li><a href="reference_plan_dep_general.html">General requirements</a></li>
+  
+
+  
+    <li><a href="reference_plan_dep_vmware.html">VMware environment</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+    <li><a href="reference_plan_best_practices.html">Best practices</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+    <!-- Check Container -->
+    <li class="subfolders">
+      <a href="#">License</a>
+      <ul>
+        
+
+  
+    <!-- Check Container -->
+    <li class="subfolders">
+      <a href="#">Options</a>
+      <ul>
+        
+
+  
+    <li><a href="concept_lic_evaluation.html">Evaluation licences</a></li>
+  
+
+  
+    <li><a href="concept_lic_production.html">Production licences</a></li>
+  
+
+  
+    <li><a href="concept_lic_platforms.html">Platform license offerings</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+    <!-- Check Container -->
+    <li class="subfolders">
+      <a href="#">Capacity pools licensing model</a>
+      <ul>
+        
+
+  
+    <li><a href="concept_lic_cp_operation.html">Operational details</a></li>
+  
+
+  
+    <li><a href="concept_lic_cp_serial_number.html">Node serial numbers</a></li>
+  
+
+  
+    <li><a href="concept_lic_cp_restrictions.html">Restrictions</a></li>
+  
+
+  
+    <li><a href="concept_lic_cp_compare_ct.html">Capacity pools versus capacity tiers</a></li>
+  
+
+  
+    <li><a href="concept_lic_cp_benefits.html">Summary of benefits</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+    <!-- Check Container -->
+    <li class="subfolders">
+      <a href="#">Purchase</a>
+      <ul>
+        
+
+  
+    <li><a href="concept_lic_workflow.html">Licensing workflow</a></li>
+  
+
+  
+    <li><a href="task_lic_acquire_ct.html">Capacity tiers</a></li>
+  
+
+  
+    <li><a href="task_lic_acquire_cp.html">Capacity pools</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+    <li><a href="reference_lic_ontap_features.html">ONTAP features</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+    <!-- Check Container -->
+    <li class="subfolders">
+      <a href="#">Install</a>
+      <ul>
+        
+
+  
+    <!-- Check Container -->
+    <li class="subfolders">
+      <a href="#">Pre-installation checklist</a>
+      <ul>
+        
+
+  
+    <li><a href="reference_chk_host_prep.html">Host preparation checklist</a></li>
+  
+
+  
+    <li><a href="reference_chk_deploy_req_info.html">Deploy utility required information</a></li>
+  
+
+  
+    <li><a href="reference_chk_select_req_info.html">ONTAP Select required information</a></li>
+  
+
+  
+    <li><a href="task_chk_nvme_configure.html">NVMe host configuration</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+    <li><a href="task_install_deploy.html">Install ONTAP Select Deploy</a></li>
+  
+
+  
+    <li><a href="task_deploy_cluster.html">Deploy a cluster</a></li>
+  
+
+  
+    <li><a href="reference_initial_state.html">Initial cluster state</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+    <!-- Check Container -->
+    <li class="subfolders">
+      <a href="#">Administer</a>
+      <ul>
+        
+
+  
+    <li><a href="concept_adm_before.html">Before you begin</a></li>
+  
+
+  
+    <li><a href="concept_adm_upgrading_nodes.html">Upgrade nodes</a></li>
+  
+
+  
+    <li><a href="task_adm_support.html">Diagnostics and support</a></li>
+  
+
+  
+    <li><a href="task_adm_security.html">Security</a></li>
+  
+
+  
+    <li><a href="task_adm_connectivity.html">Network connectivity</a></li>
+  
+
+  
+    <li><a href="task_adm_mediators.html">Mediators</a></li>
+  
+
+  
+    <li><a href="task_adm_clusters.html">Clusters</a></li>
+  
+
+  
+    <!-- Check Container -->
+    <li class="subfolders">
+      <a href="#">Nodes and hosts</a>
+      <ul>
+        
+
+  
+    <li><a href="task_adm_video_console.html">VM video console</a></li>
+  
+
+  
+    <li><a href="task_adm_resize.html">Resizing the cluster nodes</a></li>
+  
+
+  
+    <li><a href="task_adm_replace_drives_swraid.html">Replacing failed SW RAID drives</a></li>
+  
+
+  
+    <li><a href="task_adm_upgrade_vmfs6.html">Upgrading to VMFS6</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+    <li><a href="task_adm_licenses.html">Licenses</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+    <!-- Check Container -->
+    <li class="subfolders">
+      <a href="#">Deep dive</a>
+      <ul>
+        
+
+  
+    <!-- Check Container -->
+    <li class="subfolders">
+      <a href="#">Storage</a>
+      <ul>
+        
+
+  
+    <li><a href="concept_stor_concepts_chars.html">General concepts and characteristics</a></li>
+  
+
+  
+    <li><a href="concept_stor_hwraid_local.html">Hardware RAID services for local attached storage</a></li>
+  
+
+  
+    <li><a href="concept_stor_swraid_local.html">Software RAID services for local attached storage</a></li>
+  
+
+  
+    <li><a href="concept_stor_vsan_external.html">VSAN and external array configurations</a></li>
+  
+
+  
+    <li><a href="concept_stor_capacity_inc.html">Increasing storage capacity</a></li>
+  
+
+  
+    <li><a href="concept_stor_eff_support.html">Storage efficiency support</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+    <!-- Check Container -->
+    <li class="subfolders">
+      <a href="#">Networking</a>
+      <ul>
+        
+
+  
+    <li><a href="concept_nw_concepts_chars.html">General concepts and characteristics</a></li>
+  
+
+  
+    <li><a href="concept_nw_single_multi_node.html">Single and multi node configuration</a></li>
+  
+
+  
+    <li><a href="concept_nw_internal_external.html">Internal and external networks</a></li>
+  
+
+  
+    <li><a href="concept_nw_supported_configs.html">Supported configurations</a></li>
+  
+
+  
+    <li><a href="concept_nw_vsphere_vswitch_config.html">VMWare vSphere VSwitch configuration</a></li>
+  
+
+  
+    <li><a href="concept_nw_physical_switch_config.html">Physical switch configuration</a></li>
+  
+
+  
+    <li><a href="concept_nw_data_mgmt_separation.html">Data and management separation</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+    <!-- Check Container -->
+    <li class="subfolders">
+      <a href="#">High availability architecture</a>
+      <ul>
+        
+
+  
+    <li><a href="concept_ha_config.html">HA configuration</a></li>
+  
+
+  
+    <li><a href="concept_ha_mirroring.html">Syncronous replication and mirrored aggregates</a></li>
+  
+
+  
+    <li><a href="concept_ha_other.html">Other high availability functions</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+    <!-- Check Container -->
+    <li class="subfolders">
+      <a href="#">Performance</a>
+      <ul>
+        
+
+  
+    <li><a href="concept_perf_general.html">General considerations</a></li>
+  
+
+  
+    <li><a href="concept_perf_premium_ha_direct_ssd_94.html">9.4 Premium HA direct attached SSD storage</a></li>
+  
+
+  
+    <li><a href="concept_perf_premium_ha_direct_ssd_95.html">9.5 Premium HA direct attached SSD storage</a></li>
+  
+
+  
+    <li><a href="concept_perf_premium_ha_direct_ssd_96.html">9.6 Premium HA direct attached SSD storage</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+    <!-- Check Container -->
+    <li class="subfolders">
+      <a href="#">Integrate with vCenter</a>
+      <ul>
+        
+
+  
+    <!-- Check Container -->
+    <li class="subfolders">
+      <a href="#">Getting started</a>
+      <ul>
+        
+
+  
+    <li><a href="concept_vpi_overview.html">Overview</a></li>
+  
+
+  
+    <li><a href="concept_vpi_architecture.html">Architecture</a></li>
+  
+
+  
+    <li><a href="concept_vpi_planning.html">Planning</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+    <!-- Check Container -->
+    <li class="subfolders">
+      <a href="#">Manage the plug-in</a>
+      <ul>
+        
+
+  
+    <li><a href="concept_vpi_manage_before.html">Before you begin</a></li>
+  
+
+  
+    <li><a href="task_vpi_install.html">Install</a></li>
+  
+
+  
+    <li><a href="task_vpi_access.html">Access</a></li>
+  
+
+  
+    <li><a href="task_vpi_upgrade.html">Upgrade and remove</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+    <li><a href="task_vpi_manually_remove.html">Manually remove the plug-in</a></li>
+  
+
+  
+    <li><a href="task_vpi_deploy_cluster.html">Deploy a cluster</a></li>
+  
+
+  
+    <li><a href="concept_vpi_vcenter_integration.html">vCenter integration</a></li>
+  
+
+  
+    <!-- Check Container -->
+    <li class="subfolders">
+      <a href="#">Administer</a>
+      <ul>
+        
+
+  
+    <li><a href="task_vpi_adm_support.html">Diagnostics and support</a></li>
+  
+
+  
+    <li><a href="task_vpi_adm_network.html">Networking</a></li>
+  
+
+  
+    <li><a href="task_vpi_adm_clusters.html">Clusters</a></li>
+  
+
+  
+    <li><a href="task_vpi_adm_licenses.html">Licenses</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+    <li><a href="reference_vpi_troubleshooting.html">Troubleshoot</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+    <!-- Check Container -->
+    <li class="subfolders">
+      <a href="#">Automate with REST</a>
+      <ul>
+        
+
+  
+    <!-- Check Container -->
+    <li class="subfolders">
+      <a href="#">Concepts</a>
+      <ul>
+        
+
+  
+    <li><a href="concept_api_rest.html">REST web services</a></li>
+  
+
+  
+    <li><a href="concept_api_how_access.html">Access the Deploy API</a></li>
+  
+
+  
+    <li><a href="concept_api_versions.html">Deploy API versioning</a></li>
+  
+
+  
+    <li><a href="concept_api_operation.html">Basic operation</a></li>
+  
+
+  
+    <li><a href="concept_api_transaction.html">Request and response transaction</a></li>
+  
+
+  
+    <li><a href="concept_api_async_proc.html">Asynchronous processing</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+    <!-- Check Container -->
+    <li class="subfolders">
+      <a href="#">Access with a browser</a>
+      <ul>
+        
+
+  
+    <li><a href="concept_api_before_browser.html">Before you begin</a></li>
+  
+
+  
+    <li><a href="task_api_access_doc_page.html">Access the doc page</a></li>
+  
+
+  
+    <li><a href="task_api_understanding_call.html">Understanding an API call</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+    <!-- Check Container -->
+    <li class="subfolders">
+      <a href="#">Workflow processes</a>
+      <ul>
+        
+
+  
+    <li><a href="concept_api_before_workflows.html">Before you begin</a></li>
+  
+
+  
+    <li><a href="reference_api_workflow01.html">Workflow 1 Creating a cluster</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+    <!-- Check Container -->
+    <li class="subfolders">
+      <a href="#">Access with Python</a>
+      <ul>
+        
+
+  
+    <li><a href="concept_api_before_python.html">Before you begin</a></li>
+  
+
+  
+    <li><a href="concept_api_understanding_scripts.html">Understanding the scripts</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+    <!-- Check Container -->
+    <li class="subfolders">
+      <a href="#">Python code samples</a>
+      <ul>
+        
+
+  
+    <li><a href="reference_api_script_cc.html">Create a cluster</a></li>
+  
+
+  
+    <li><a href="reference_api_json_cc.html">JSON to create a cluster</a></li>
+  
+
+  
+    <li><a href="reference_api_script_anl.html">Add a node license</a></li>
+  
+
+  
+    <li><a href="reference_api_script_dc.html">Delete a cluster</a></li>
+  
+
+  
+    <li><a href="reference_api_script_common.html">Common support module</a></li>
+  
+
+  
+    <li><a href="reference_api_script_resize.html">Resize cluster nodes</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+    <li><a href="concept_automate_ansible.html">Automate with Ansible</a></li>
+  
+
+  
+    <!-- Check Container -->
+    <li class="subfolders">
+      <a href="#">Use the CLI</a>
+      <ul>
+        
+
+  
+    <li><a href="concept_cli_before.html">Before you begin</a></li>
+  
+
+  
+    <li><a href="task_cli_signing_in.html">Sign in using SSH</a></li>
+  
+
+  
+    <li><a href="task_cli_deploy_cluster.html">Deploy a cluster</a></li>
+  
+
+  
+    <li><a href="task_cli_security.html">Security</a></li>
+  
+
+  
+    <li><a href="task_cli_connectivity.html">Network connectivity</a></li>
+  
+
+  
+    <li><a href="task_cli_clusters.html">Clusters</a></li>
+  
+
+  
+    <!-- Check Container -->
+    <li class="subfolders">
+      <a href="#">Nodes and hosts</a>
+      <ul>
+        
+
+  
+    <li><a href="task_cli_upgrade_esxi65.html">Upgrading ESXi to 6.5 and higher</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+    <!-- Check Container -->
+    <li class="subfolders">
+      <a href="#">Deploy utility</a>
+      <ul>
+        
+
+  
+    <li><a href="task_cli_upgrade_deploy.html">Upgrade a Deploy instance</a></li>
+  
+
+  
+    <li><a href="task_cli_migrate_deploy.html">Migrate a Deploy instance</a></li>
+  
+
+  
+    <li><a href="task_cli_deploy_image_add.html">Add ONTAP Select images</a></li>
+  
+
+  
+    <li><a href="task_cli_deploy_image_remove.html">Remove ONTAP Select images</a></li>
+  
+
+  
+    <li><a href="task_cli_deploy_recover_two_node.html">Recover Deploy for a two-node cluster</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+    <li class="active"><a href="reference_faq.html">FAQ</a></li>
+  
+
+  
+    <li><a href="reference_additional_info.html">Get more information</a></li>
+  
+
+  
+    <li><a href="reference_earlier_versions.html">Earlier versions</a></li>
+  
+
+  
+    <li><a href="reference_legal_notices.html">Legal notices</a></li>
+  
+
+
+</ul>
+
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+      </div>
+      
+
+      <div class="n-doc__component-detail-content n-doc__component-detail-content--show-code">
+        <!-- Begin of page container -->
+        <article class="page-content">
+          
+
+<div class="n-doc__component-detail-heading-wrap">
+  <h1 class="n-doc__component-detail-heading">Frequently asked questions
+    <span>
+      
+        <a target="_blank" href="https://github.com/NetAppDocs/ontap-select/blob/master/reference_faq.adoc" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit on GitHub</a>
+        <a target="_blank" href="https://github.com/NetAppDocs/ontap-select/issues/new?body=Page%3A%20[Frequently asked questions](https://docs.netapp.com/us-en/ontap-select/reference_faq.html)" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Request doc changes</a>
+      
+    </span>
+  </h1>
+</div>
+
+<p class="page-details">
+
+<time datetime="2019-11-21 21:35:09 +0000">11/21/2019</time>
+
+
+</p>
+
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph lead">
+<p>Find answers to common questions about ONTAP Select.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="general">General</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Browse some general questions and answers.</p>
+</div>
+<div class="sect4">
+<h5 id="what-is-the-difference-between-ontap-deploy-and-ontap-select"><strong>What is the difference between ONTAP Deploy and ONTAP Select?</strong></h5>
+<div class="paragraph">
+<p>ONTAP Deploy is the utility used to create ONTAP Select clusters. Currently ONTAP Deploy is the only method available for creating a production cluster. ONTAP Deploy can also be used to create an evaluation Select cluster to allow clients to test and document the actual steps of a production deployment. ONTAP Deploy can also convert an evaluation cluster to a production cluster using an appropriate Capacity Tier license with sufficient capacity to cover the space consumed during the evaluation.</p>
+</div>
+<div class="paragraph">
+<p>ONTAP Deploy is a virtual machine that contains an image of ONTAP Select. During cluster installation, ONTAP Deploy enforces several checks to help make sure that the ONTAP Select minimum requirements are met. The ONTAP Deploy VM and Select clusters can be upgraded separately.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="how-can-i-troubleshoot-a-performance-issue-with-ontap-select"><strong>How can I troubleshoot a performance issue with ONTAP Select?</strong></h5>
+<div class="paragraph">
+<p>Just like ONTAP on FAS, performance data should be collected using the perfstat utility. Here is a sample command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>* perfstat8 –i N,m -t &lt;sample time in minutes&gt; --verbose --nodes=&lt;filer IP&gt; --diag-passwd=abcxyz --mode="cluster-mode" &gt; &lt;name of output file&gt;</pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="how-do-i-access-the-swagger-api-page-for-ontap-deploy"><strong>How do I access the Swagger API page for ONTAP Deploy?</strong></h5>
+<div class="listingblock">
+<div class="content">
+<pre>http://&lt;IP address of Deploy&gt;/api/ui</pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The API v3 release is not backward compatible with the prior version of the API. A new API guide is available on the <a href="https://library.netapp.com/ecm/ecm_download_file/ECMLP2845694">Field Portal</a>.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect4">
+<h5 id="can-the-ontap-select-vm-be-backed-up-with-vmware-or-other-third-party-snapshots"><strong>Can the ONTAP Select VM be backed up with VMware or other third-party snapshots?</strong></h5>
+<div class="paragraph">
+<p>No. The ONTAP Select VM uses independent-persistent drives, which are excluded from VMware-based snapshots. The only supported method for backing up ONTAP Select is SnapMirror, SnapVault, or SVM DR (where applicable).</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="where-do-i-get-clarification-for-questions-not-covered-in-this-faq"><strong>Where do I get clarification for questions not covered in this FAQ?</strong></h5>
+<div class="paragraph">
+<p>Contact <a href="mailto:ng-ses-ontap-select@netapp.com">ng-ses-ontap-select@netapp.com</a>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="licenses-install-upgrade-and-revert">Licenses, install, upgrade, and revert</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Browse some questions about licenses, installs, upgrades, and reverts.</p>
+</div>
+<div class="sect4">
+<h5 id="can-ontap-select-and-ontap-deploy-be-upgraded-separately"><strong>Can ONTAP Select and ONTAP Deploy be upgraded separately?</strong></h5>
+<div class="paragraph">
+<p>Yes. The ONTAP Deploy utility can be upgraded separately from the ONTAP Select cluster. Similarly, the Select cluster can be upgraded separately from the ONTAP Deploy utility.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="can-ontap-select-be-upgraded-using-the-same-procedure-as-a-fas-cluster"><strong>Can ONTAP Select be upgraded using the same procedure as a FAS cluster?</strong></h5>
+<div class="paragraph">
+<p>Yes, the upgrade procedure for a Select cluster is identical to the upgrade of a FAS cluster, although the ONTAP Select upgrade binary is a separate download from the ONTAP on FAS upgrade binary.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="can-ontap-select-be-reverted-using-the-same-procedure-as-a-fas-cluster"><strong>Can ONTAP Select be reverted using the same procedure as a FAS cluster?</strong></h5>
+<div class="paragraph">
+<p>Yes, the revert procedure for an ONTAP Select cluster is almost identical to the revert procedure for a FAS cluster. There are a few differences however:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Only upgraded instances of ONTAP Select can be reverted, and only up to the original install version. New installs cannot be reverted to an older code release, even if ONTAP Select in general does support that older release.</p>
+</li>
+<li>
+<p>For ONTAP Select (KVM) and ONTAP Select (ESX) using software RAID, it is not possible to revert to a prior version that does not support software RAID. Furthermore, a new installation of ONTAP Select 9.5 or later on ESX uses VMXNET3 network drivers and, when possible, the vNMVE driver. These new installations cannot be reverted to prior versions of ONTAP Select.</p>
+</li>
+<li>
+<p>If the ONTAP Select VM was also upgraded to a Large instance (using the Premium XL license), then reverting to a prior version before 9.6 is not supported, since the Large instance feature is not available in earlier versions.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="does-the-ontap-metrocluster-sds-require-at-a-minimum-a-premium-license"><strong>Does the ONTAP MetroCluster SDS require at a minimum a Premium license?</strong></h5>
+<div class="paragraph">
+<p>Yes.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="can-the-ip-addresses-of-the-ontap-deploy-and-ontap-select-cluster-and-node-management-be-changed-after-installation"><strong>Can the IP addresses of the ONTAP Deploy and ONTAP Select cluster and node management be changed after installation?</strong></h5>
+<div class="paragraph">
+<p>Changes to the following ONTAP Select cluster properties are recognized by ONTAP Deploy using the cluster refresh operation available through the GUI, CLI, or REST API:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Network configuration (IP addresses, DNS, NTP, netmask, and gateway)</p>
+</li>
+<li>
+<p>ONTAP Select cluster, node name, and version</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The following ONTAP Select VM changes are also recognized:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>ONTAP Select VM name and state changes (for example, online or offline)</p>
+</li>
+<li>
+<p>Host network name and storage pool name changes</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Changing the IP address of the ONTAP Deploy VM is not supported.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Upgrading to ONTAP Deploy 2.6 enables support for these changes for any ONTAP Select cluster that is already deployed but has not been changed from its original configuration. In other words, if the ONTAP Select cluster properties mentioned above were changed using System Manager or vCenter, then upgrading to ONTAP Deploy 2.6 will not fix these inconsistencies. The ONTAP Select property changes must be first rolled back for ONTAP Deploy to add its unique metadata to each ONTAP Select VM.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="storage">Storage</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Browse some questions about storage.</p>
+</div>
+<div class="sect4">
+<h5 id="can-a-single-ontap-deploy-instance-create-clusters-on-both-esx-and-kvm"><strong>Can a single ONTAP Deploy instance create clusters on both ESX and KVM?</strong></h5>
+<div class="paragraph">
+<p>Yes. ONTAP Deploy can be installed on either KVM or ESX, and both installations can create ONTAP Select clusters on either hypervisor.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="is-vcenter-required-for-ontap-select-on-esx"><strong>Is vCenter required for ONTAP Select on ESX?</strong></h5>
+<div class="paragraph">
+<p>If the ESX hosts are properly licensed, then there is no need for the ESX hosts to be managed by a vCenter Server. However, if the hosts are managed by a vCenter server, then you must configure ONTAP Deploy to use that vCenter Server. In other words, you cannot configure ESX hosts as standalone in ONTAP Deploy if they are being actively managed by a vCenter Server. Note that the ONTAP Deploy VM relies on vCenter to track all ONTAP Select VM migrations between ESXi hosts due to a vMotion or VMware HA event.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="what-is-software-raid"><strong>What is Software RAID?</strong></h5>
+<div class="paragraph">
+<p>ONTAP Select can use servers without a RAID controller. Only SSDs are supported with software RAID. Other drive types (including NVME) are not supported. The ONTAP Select boot and core disks must still reside inside a virtualized partition (storage pool or datastore). ONTAP Select uses RD2 (root-data-data partitioning) to partition the SSDs. Therefore, the ONTAP Select root partition resides on the same physical spindles that are used for the data aggregates. However, the root aggregate and the boot and core virtualized disks do not count against the capacity license.</p>
+</div>
+<div class="paragraph">
+<p>All RAID methods available on AFF/FAS are also available to ONTAP Select. This includes RAID 4, RAID DP, and RAID-TEC. The minimum number of SSDs varies depending on the type of RAID configuration chosen. Best practices require the presence of at least one spare. The spare and parity disks do not count toward the capacity license.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="how-is-software-raid-different-from-a-hardware-raid-configuration"><strong>How is software RAID different from a hardware RAID configuration?</strong></h5>
+<div class="paragraph">
+<p>Software RAID is a layer in the ONTAP software stack. Software RAID provides more administrative control because the physical drives are partitioned and available as raw disks within the ONTAP Select VM. Whereas, with hardware RAID, a single large LUN is usually available that can then be carved out to create VMDISKs seen within ONTAP Select. Software RAID is available as an option and can be used instead of hardware RAID.</p>
+</div>
+<div class="paragraph">
+<p>Some of the requirements for software RAID are as follows:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Supported for KVM and ESX</p>
+</li>
+<li>
+<p>Size of supported physical disks: 200GB – 32TB</p>
+</li>
+<li>
+<p>Only supported on DAS configurations</p>
+</li>
+<li>
+<p>Only supported with SSDs</p>
+</li>
+<li>
+<p>Requires a Premium or Premium XL ONTAP Select license</p>
+</li>
+<li>
+<p>The hardware RAID controller should be absent or disabled or it should operate in SAS HBA mode</p>
+</li>
+<li>
+<p>An LVM storage pool or datastore based on a dedicated LUN must be used for system disks: core dump, boot/NVRAM, and the Mediator.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="does-ontap-select-for-kvm-support-multiple-nic-bonds"><strong>Does ONTAP Select for KVM support multiple NIC bonds?</strong></h5>
+<div class="paragraph">
+<p>When installing on KVM, you must use a single bond and a single bridge. A host with two or four physical ports should have all the ports in the same bond.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="how-does-ontap-select-report-or-alert-for-a-failed-physical-disk-or-a-nic-in-the-hypervisor-host-does-ontap-select-retrieve-this-information-from-the-hypervisor-or-should-monitoring-be-set-at-the-hypervisor-level"><strong>How does ONTAP Select report or alert for a failed physical disk or a NIC in the hypervisor host? Does ONTAP Select retrieve this information from the hypervisor or should monitoring be set at the hypervisor level?</strong></h5>
+<div class="paragraph">
+<p>When using a hardware RAID controller, ONTAP Select is largely unaware of underlying server issues. If the server is configured according to our best practices, a certain amount of redundancy should exist. We recommend RAID 5/6 to survive drive failures. For software RAID configurations, ONTAP is responsible for issuing alerts about disk failure and, if there is a spare drive, initiate the drive rebuild.</p>
+</div>
+<div class="paragraph">
+<p>You should use a minimum of two physical NICs to avoid a single point of failure at the network layer. NetApp recommends that Data, Mgmt, and Internal port groups have NIC teaming and bonding configured with two or more uplinks in the team or bond. Such configuration ensures that, if there is any uplink failure, the virtual switch moves the traffic from the failed uplink to a healthy uplink in the NIC team. For details about the recommended network configuration, see <a href="ct_nw_supported_configuraitons.html#network-configuration-best-practices">Network configuration best practices</a>.</p>
+</div>
+<div class="paragraph">
+<p>All other errors are handled by ONTAP HA in the case of a two-node or four-node cluster. If the hypervisor server needs to be replaced and the ONTAP Select cluster needs to be reconstituted with a new server, contact NetApp Technical Support.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="what-is-the-maximum-datastore-size-that-ontap-select-supports"><strong>What is the maximum datastore size that ONTAP Select supports?</strong></h5>
+<div class="paragraph">
+<p>All configurations, including vSAN, support 400TB of storage per ONTAP Select node.</p>
+</div>
+<div class="paragraph">
+<p>When installing on datastores larger than the supported maximum size, you must use Capacity Cap during product setup.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="how-can-i-increase-the-capacity-of-an-ontap-select-node"><strong>How can I increase the capacity of an ONTAP Select node?</strong></h5>
+<div class="paragraph">
+<p>ONTAP Deploy contains a storage add workflow that supports the capacity expansion operation on an ONTAP Select node. You can expand the storage under management by using space from the same datastore (if any space is still available) or add space from a separate datastore. The mixing of local datastores and remote datastores in the same aggregate is not supported.</p>
+</div>
+<div class="paragraph">
+<p>Storage add also supports software RAID. However, in the case of software RAID, additional physical drives must be added to the ONTAP Select VM. The storage add in this case is similar to managing a FAS or AFF array. RAID group sizes and drive sizes must be considered when adding storage to an ONTAP Select node using software RAID.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="does-ontap-select-support-vsan-or-external-array-type-datastores"><strong>Does ONTAP Select support vSAN or external array type datastores?</strong></h5>
+<div class="paragraph">
+<p>ONTAP Deploy and ONTAP Select for ESX support the configuration of an ONTAP Select single-node cluster using either a vSAN or an external array type of datastore for its storage pool.</p>
+</div>
+<div class="paragraph">
+<p>ONTAP Deploy and ONTAP Select for KVM support the configuration of an ONTAP Select single-node cluster using a shared logical storage pool type on external arrays. The storage pools can be based on iSCSI or FC/FCoE. Other types of storage pools are not supported.</p>
+</div>
+<div class="paragraph">
+<p>Multinode HA clusters on shared storage are supported.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="does-ontap-select-support-multinode-clusters-on-vsan-or-other-shared-external-storage-including-some-hci-stacks"><strong>Does ONTAP Select support multinode clusters on vSAN or other shared external storage including some HCI stacks?</strong></h5>
+<div class="paragraph">
+<p>Multinode clusters using external storage (multinode vNAS) are supported for both ESX and KVM. Mixing of hypervisors in the same cluster is not supported. An HA architecture on shared storage still implies that each node in an HA pair has a mirror copy of its partner data. However, a multinode cluster brings in the benefits of ONTAP nondisruptive operation as opposed to a single-node cluster which relies on VMware HA or KVM Live Motion.</p>
+</div>
+<div class="paragraph">
+<p>Although ONTAP Deploy adds support for multiple ONTAP Select VMs on the same host, it does not allow those instances to be part of the same ONTAP Select cluster during cluster creation. For ESX environments, NetApp recommends creating VM anti-affinity rules so that VMware HA does not attempt to migrate multiple ONTAP Select VMs from the same ONTAP Select cluster onto a single ESX host. Furthermore, if ONTAP Deploy detects that an administrative (user-initiated) vMotion or live migration of an ONTAP Select VM has resulted in a violation of our best practice such as two ONTAP Select nodes ending up on the same physical host, ONTAP Deploy posts an alert in the Deploy GUI and log. The only way that ONTAP Deploy becomes aware of the ONTAP Select VM location is as a result of a Cluster Refresh operation, which is a manual operation that the ONTAP Deploy administrator must initiate. There is no functionality in ONTAP Deploy that enables proactive monitoring, and the alert is only visible through the Deploy GUI or log. In other words, this alert cannot be forwarded to a centralized monitoring infrastructure.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="does-ontap-select-support-vmwares-nsx-vxlan"><strong>Does ONTAP Select support VMware’s NSX VXLAN?</strong></h5>
+<div class="paragraph">
+<p>NSX-V VXLAN port groups are supported. For multinode HA, including ONTAP MetroCluster SDS, make sure that you configure the internal network MTU to be between 7500 and 8900 (instead of 9000) to accommodate the VXLAN overhead. The internal network MTU can be configured with ONTAP Deploy during cluster deployment.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="does-ontap-select-support-kvm-live-migration"><strong>Does ONTAP Select support KVM live migration?</strong></h5>
+<div class="paragraph">
+<p>ONTAP Select VMs that run on external array storage pools support virsh live migrations.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="do-i-need-ontap-select-premium-for-vsan-af"><strong>Do I need ONTAP Select Premium for vSAN AF?</strong></h5>
+<div class="paragraph">
+<p>No, all versions are supported regardless of whether the external array or vSAN configurations are all flash.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="what-vsan-fttftm-settings-are-supported"><strong>What vSAN FTT/FTM settings are supported?</strong></h5>
+<div class="paragraph">
+<p>The Select VM inherits the vSAN datastore storage policy, and there are no restrictions on FTT/FTM settings. However, note that, depending on the FTT/FTM settings, the ONTAP Select VM size can be significantly larger than the capacity configured during its setup. ONTAP Select uses thick-eager, zeroed VMDKs that are created during setup. To avoid affecting other VMs using the same shared datastore, it is important to provide enough free capacity in the datastore to accommodate the true Select VM size as derived from the Select capacity and the FTT/FTM settings.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="can-multiple-ontap-select-nodes-run-on-the-same-host-if-they-are-part-of-different-select-clusters"><strong>Can multiple ONTAP Select nodes run on the same host if they are part of different Select clusters?</strong></h5>
+<div class="paragraph">
+<p>It is possible to configure multiple ONTAP Select nodes on the same host for vNAS configurations only, as long as these nodes are not part of the same ONTAP Select cluster. This is not supported for DAS configurations because multiple ONTAP Select nodes on the same physical host would compete for access to the RAID controller.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="can-you-have-a-host-with-a-single-10ge-port-run-ontap-select-and-is-it-available-for-both-esx-and-kvm"><strong>Can you have a host with a single 10GE port run ONTAP Select, and is it available for both ESX and KVM?</strong></h5>
+<div class="paragraph">
+<p>You can use a single 10GE port to connect to the external network. However, NetApp recommends that you use this only in constrained small form-factor environments. This is supported with both ESX and KVM.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="what-additional-processes-do-you-need-to-run-to-do-a-live-migration-on-kvm"><strong>What additional processes do you need to run to do a live migration on KVM?</strong></h5>
+<div class="paragraph">
+<p>You must install and run open-source CLVM and pacemaker (pcs) components on each host participating in the live migration. This is required to access the same volume groups on each host.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="vcenter">vCenter</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Browse some questions about vCenter.</p>
+</div>
+<div class="sect4">
+<h5 id="how-does-ontap-deploy-communicate-with-vcenter-and-what-firewall-ports-should-be-opened"><strong>How does ONTAP Deploy communicate with vCenter and what firewall ports should be opened?</strong></h5>
+<div class="paragraph">
+<p>ONTAP Deploy uses the VMware VIX API to communicate with the vCenter and/or the ESX host. The VMware documentation states that the initial connection to either a vCenter Server or an ESX host is done using HTTPS/SOAP on TCP port 443. This is the port for secure HTTP over TLS/SSL. Secondly, a connection to the ESX host is opened on a socket on TCP port 902. Data going over this connection is encrypted with SSL. Additionally, ONTAP Deploy issues a <code>PING</code> command to verify that there is an ESX host responding at the IP address you specified.</p>
+</div>
+<div class="paragraph">
+<p>ONTAP Deploy must also be able to communicate with the ONTAP Select node and cluster management IP addresses as follows:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Ping</p>
+</li>
+<li>
+<p>SSH (port 23)</p>
+</li>
+<li>
+<p>SSL (port 443)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For two-node clusters, ONTAP Deploy hosts the cluster mailboxes. Each ONTAP Select node must be able to reach ONTAP Deploy through iSCSI (port 3260).</p>
+</div>
+<div class="paragraph">
+<p>For multinode clusters, the internal network must be fully opened (no NAT or firewalls).</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="what-vcenter-rights-does-ontap-deploy-need-to-create-ontap-select-clusters"><strong>What vCenter rights does ONTAP Deploy need to create ONTAP Select clusters?</strong></h5>
+<div class="paragraph">
+<p>The list of vCenter rights required is available here: <a href="reference_chk_select_req_info.html#access-to-a-vcenter-server">Access to a vCenter server</a>.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="what-is-the-vcenter-deploy-plug-in"><strong>What is the vCenter Deploy plug-in?</strong></h5>
+<div class="paragraph">
+<p>It is possible to integrate the ONTAP Deploy functionality in the vCenter server with the ONTAP Deploy plug-in. Please note that the plug-in does not replace ONTAP Deploy. Rather ONTAP Deploy works in the background, and the vCenter admin can invoke most of the ONTAP Deploy functionality with the plug-in.  Some ONTAP Deploy operations are available only using CLI.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="how-many-ontap-deploy-vms-can-register-their-plug-ins-with-one-vcenter-server"><strong>How many ONTAP Deploy VMs can register their plug-ins with one vCenter server?</strong></h5>
+<div class="paragraph">
+<p>Only one ONTAP Deploy VM can register its plug-in with a specific vCenter server.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="what-is-the-benefit-of-the-ontap-deploy-vcenter-plug-in"><strong>What is the benefit of the ONTAP Deploy vCenter plug-in?</strong></h5>
+<div class="paragraph">
+<p>The plug-in allows vCenter admins and IT generalists to create ONTAP Select clusters using the vCenter HTML5 GUI. Please note that the Flash vCenter GUI is not supported.</p>
+</div>
+<div class="paragraph">
+<p>Also, it allows ONTAP Deploy to use the vCenter RBAC for authentication. Users that are given the vCenter privilege of using the ONTAP Deploy plug-in have their vCenter account mapped to the ONTAP Deploy admin user. ONTAP Deploy logs the user ID of every operation and the following file can be used as a basic auditing log:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>nginx_access.log</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="ha-and-clusters">HA and clusters</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Browse some questions about high availability and clusters.</p>
+</div>
+<div class="sect4">
+<h5 id="what-is-the-difference-between-a-four-node-six-node-or-eight-node-cluster-and-a-two-node-ontap-select-cluster"><strong>What is the difference between a four-node, six-node, or eight-node cluster and a two-node ONTAP Select cluster?</strong></h5>
+<div class="paragraph">
+<p>Unlike four-node, six-node, and eight-node clusters in which the ONTAP Deploy VM is primarily used to create the cluster, a two-node cluster continuously relies on the ONTAP Deploy VM for HA quorum. If the ONTAP Deploy VM is unavailable, then failover services are disabled.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="what-is-metrocluster-sds"><strong>What is MetroCluster SDS?</strong></h5>
+<div class="paragraph">
+<p>MetroCluster SDS is a lower-cost synchronous replication option that falls under the category of the MetroCluster Business Continuity solutions from NetApp. It is available only with ONTAP Select, unlike NetApp MetroCluster that is available on FAS Hybrid Flash, AFF, NetApp Private Storage for Cloud, and NetApp FlexArray® technology.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="how-is-the-metrocluster-sds-different-from-netapp-metrocluster"><strong>How is the MetroCluster SDS different from NetApp MetroCluster?</strong></h5>
+<div class="paragraph">
+<p>MetroCluster SDS provides a synchronous replication solution and falls under NetApp MetroCluster solutions. However, the key differences are in the distances supported (~10km versus 300km), and the connectivity type (only IP networks are supported rather than FC and IP).</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="what-is-the-difference-between-a-two-node-ontap-select-cluster-and-a-two-node-ontap-metrocluster-sds"><strong>What is the difference between a two-node ONTAP Select cluster and a two-node ONTAP MetroCluster SDS?</strong></h5>
+<div class="paragraph">
+<p>The two-node cluster is defined as a cluster for which both nodes are in the same data center within 300m of each other. In general, both nodes have uplinks to the same network switch or set of network switches connected by an Inter-Switch Link.</p>
+</div>
+<div class="paragraph">
+<p>The two-node MetroCluster SDS is defined as a cluster whose nodes are physically separated (different rooms, different buildings, or different data centers) and each node’s uplink connections are connected to separate network switches. Although MetroCluster SDS does not require dedicated hardware, the environment should support a set of minimum requirements in terms of latency (5ms RTT and 5ms jitter for a max total of 10ms) and physical distance (10km).</p>
+</div>
+<div class="paragraph">
+<p>MetroCluster SDS is a premium feature and requires the Premium or Premium XL license. A Premium license supports the creation of both Small and Medium VMs as well as HDD and SSD media. All these configurations are supported.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="does-the-ontap-metrocluster-sds-require-local-storage-das"><strong>Does the ONTAP MetroCluster SDS require local storage (DAS)?</strong></h5>
+<div class="paragraph">
+<p>ONTAP MetroCluster SDS supports all type of storage configurations (DAS and vNAS).</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="does-ontap-metrocluster-sds-support-software-raid"><strong>Does ONTAP MetroCluster SDS support software RAID?</strong></h5>
+<div class="paragraph">
+<p>Yes, Software RAID is supported with SSD media on both KVM and ESX.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="does-ontap-metrocluster-sds-support-both-ssds-and-spinning-media"><strong>Does ONTAP MetroCluster SDS support both SSDs and spinning media?</strong></h5>
+<div class="paragraph">
+<p>Yes, although a Premium license is required, this license supports both small and medium VMs as well as SSDs and spinning media.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="does-ontap-metrocluster-sds-support-four-node-and-larger-cluster-sizes"><strong>Does ONTAP MetroCluster SDS support four-node and larger cluster sizes?</strong></h5>
+<div class="paragraph">
+<p>No, only two-node clusters with a Mediator can be configured as MetroCluster SDS.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="what-are-the-requirements-for-ontap-metrocluster-sds"><strong>What are the requirements for ONTAP MetroCluster SDS?</strong></h5>
+<div class="paragraph">
+<p>The requirements are as follows:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Three data centers (one for the ONTAP Deploy Mediator and one for each node).</p>
+</li>
+<li>
+<p>5ms RTT and 5ms jitter for a max total of 10ms and maximum physical distance of 10km between the ONTAP Select nodes.</p>
+</li>
+<li>
+<p>125ms RTT and a minimum bandwidth of 5Mbps between the ONTAP Deploy Mediator and each ONTAP Select node.</p>
+</li>
+<li>
+<p>A Premium or Premium XL license.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="does-ontap-select-support-vmotion-or-vmware-ha"><strong>Does ONTAP Select support vMotion or VMware HA?</strong></h5>
+<div class="paragraph">
+<p>ONTAP Select VMs that run on vSAN datastores or external array datastores (in other words, vNAS deployments) support vMotion, DRS, and VMware HA functionality.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="does-ontap-select-support-storage-vmotion"><strong>Does ONTAP Select support Storage vMotion?</strong></h5>
+<div class="paragraph">
+<p>Storage vMotion is supported for all configurations, including single-node and multinode ONTAP Select clusters and the ONTAP Deploy VM. Storage vMotion can be used to migrate the ONTAP Select or the ONTAP Deploy VM between different VMFS versions (VMFS 5 to VMFS 6 for example), but it is not restricted to this use case. The best practice is to shut down the VM before initiating a Storage vMotion operation. ONTAP Deploy must issue the following operation after the storage vMotion operation is completed:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>cluster refresh</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Please note that a storage vMotion operation between different types of datastores is not supported. In other words, storage vMotion operations between NFS-type datastores and VMFS datastores are not supported. In general, storage vMotion operations between external datastores and DAS datastores are not supported.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="can-the-ha-traffic-between-ontap-select-nodes-run-over-a-different-vswitch-andor-segregated-physical-ports-andor-using-point-to-point-ip-cables-between-esx-hosts"><strong>Can the HA traffic between ONTAP Select nodes run over a different vSwitch and/or segregated physical ports and/or using point-to-point IP cables between ESX hosts?</strong></h5>
+<div class="paragraph">
+<p>These configurations are not supported. ONTAP Select does not have visibility into the status of the physical network uplinks carrying client traffic. Therefore, ONTAP Select relies on the HA heartbeat to make sure that the VM is accessible to clients and to its peer at the same time. When a loss of physical connectivity occurs, the loss of the HA heartbeat results in an automatic failover to the other node, which is the desired behavior.</p>
+</div>
+<div class="paragraph">
+<p>Segregating the HA traffic on a separate physical infrastructure can result in a Select VM being able to communicate with its peer but not with its clients. This prevents the automatic HA process and results in data unavailability until a manual failover is invoked.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="mediator-service">Mediator service</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Browse some questions about Mediator service.</p>
+</div>
+<div class="sect4">
+<h5 id="what-is-the-mediator-service"><strong>What is the Mediator service?</strong></h5>
+<div class="paragraph">
+<p>A two-node cluster continuously relies on the ONTAP Deploy VM for HA quorum. An ONTAP Deploy VM taking part in a two-node HA quorum negotiation is labeled a Mediator VM.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="can-the-mediator-service-be-remote"><strong>Can the Mediator service be remote?</strong></h5>
+<div class="paragraph">
+<p>Yes. ONTAP Deploy acting as a Mediator for a two-node HA pair supports a WAN latency of up to 500ms RTT and requires a minimum bandwidth of 5Mbps.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="what-protocol-does-the-mediator-service-use"><strong>What protocol does the Mediator service use?</strong></h5>
+<div class="paragraph">
+<p>The Mediator traffic is iSCSI, originates on the ONTAP Select node management IP addresses, and terminates on the ONTAP Deploy IP address. Note that you cannot use IPv6 for the ONTAP Select node management IP address when using a two-node cluster.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="can-i-use-one-mediator-service-for-multiple-two-node-ha-clusters"><strong>Can I use one Mediator service for multiple two-node HA clusters?</strong></h5>
+<div class="paragraph">
+<p>Yes. Each ONTAP Deploy VM can serve as a common Mediator service for up to 100 two-node ONTAP Select clusters.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="can-the-mediator-service-location-be-changed-after-deployment"><strong>Can the Mediator service location be changed after deployment?</strong></h5>
+<div class="paragraph">
+<p>Yes. It is possible to use another ONTAP Deploy VM to host the Mediator service.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="does-ontap-select-support-stretched-clusters-with-or-without-the-mediator"><strong>Does ONTAP Select support stretched clusters with (or without) the Mediator?</strong></h5>
+<div class="paragraph">
+<p>Only a two-node cluster with a Mediator is supported in a stretched HA deployment model.</p>
+</div>
+</div>
+</div>
+</div>
+
+        </article>
+        <!-- Page Container -->
+      </div>
+
+      
+      <div class="page-nav-container">
+        <nav class="page-nav-fixed">
+          <div class="page-nav-title">On this page:</div>
+          <ul class="page-nav-inner" id="page-menu"></ul>
+        </nav>
+      </div>
+      
+
+    </div>
+  </div>
+</div>
+
+      </main>
+
+      <!-- Footer -->
+      
+      <footer class="n-footer n-footer--v1" style="border-top: solid 10px #DFDFDF;">
+        <div class="n-footer__bottom">
+          <div class="n-container">
+            <div class="n-footer__bottom-left">
+              <div class="n-footer__copyright">
+                  <a href="//www.netapp.com/us/legal/copyright.aspx" class="n-footer__copyright-link">© 2019 NetApp, Inc.</a>
+              </div>
+              <div class="n-footer__copyright">
+                <a href="//www.netapp.com/us/legal/index.aspx" class="n-footer__copyright-link">Legal</a>
+              </div>
+              <div class="n-footer__social-links n-footer__copyright">
+                <ul class="n-footer__social-link-list">
+                  <li class="n-footer__social-link-list-item">
+                    <a class="n-footer__social-link" data-ntap-social="follow-blog" href="http://blog.netapp.com" target="_blank" title="blog" alt="blog">
+                      <span class="n-footer__social-link-text">blog</span>
+                      <svg class="n-icon-blog n-footer__social-link-icon" aria-labelledby="title">
+                        <title>blog@</title>
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ontap-select/us-en/common/svg/sprite.svg#blog"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="n-footer__social-link-list-item">
+                    <a class="n-footer__social-link" data-ntap-social="follow-community" href="http://community.netapp.com/" target="_blank" title="community" alt="community">
+                      <span class="n-footer__social-link-text">community</span>
+                      <svg class="n-icon-twitter n-footer__social-link-icon" aria-labelledby="title">
+                        <title>community@</title>
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ontap-select/us-en/common/svg/sprite.svg#comments"></use>
+                      </svg>
+                    </a>
+                  </li>
+
+                  <li class="n-footer__social-link-list-item">
+                    <a class="n-footer__social-link" data-ntap-social="follow-twitter" href="https://twitter.com/netappdoc" target="_blank" title="twitter" alt="twitter">
+                      <span class="n-footer__social-link-text">twitter</span>
+                      <svg class="n-icon-twitter n-footer__social-link-icon" aria-labelledby="title">
+                        <title>twitter@</title>
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ontap-select/us-en/common/svg/sprite.svg#twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="n-footer__social-link-list-item">
+                    <a class="n-footer__social-link" data-ntap-social="follow-youtube" href="https://www.youtube.com/user/NetAppTechCommTV/" target="_blank" title="youtube" alt="youtube">
+                      <span class="n-footer__social-link-text">youtube</span>
+                      <svg class="n-icon-youtube n-footer__social-link-icon" aria-labelledby="title">
+                        <title>youtube@</title>
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ontap-select/us-en/common/svg/sprite.svg#youtube"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="n-footer__bottom-right">
+              <div class="n-footer__copyright">
+                <a href="https://docs.netapp.com/us-en/contribute/" class="n-footer__copyright-link">Contribute</a>
+              </div>
+              <div class="n-footer__copyright">
+                <a target="_self" class="n-footer__copyright-link" href="javascript:netapp_mailto()">Email your feedback</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+
+    <script src="/ontap-select/us-en/common/js/components.js"></script>
+    <script src="/ontap-select/us-en/common/js/doc-components.js"></script>
+
+    <!-- Elasticsearch JS -->
+    <script type="text/javascript" src='/ontap-select/us-en/js/bundle.js'></script>
+
+    <!-- Syntax Highlighting -->
+    <script type="text/javascript" src='/ontap-select/us-en/js/prism.js'></script>
+    <script type="text/javascript" src='/ontap-select/us-en/js/prism-curl.js'></script>
+
+  </body>
+
+  
+</html>

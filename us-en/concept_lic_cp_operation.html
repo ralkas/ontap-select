@@ -1,0 +1,1420 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <title>Operational details</title>
+  <meta charset="utf-8">
+  <meta property="og:title" content="Operational details" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://docs.netapp.com/ontap-select/us-en/concept_lic_cp_operation.html" />
+	<meta property="og:description" content="The capacity pools licensing model is different from the capacity tiers model. Instead of a dedicating storage capacity to each individual node, the storage ..." />
+  <meta property="og:image" content="https://docs.netapp.com/ontap-select/us-en/images/logo-tophat-social.png" />
+  <meta property="og:image:alt" content="NetApp Logo" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+  <meta http-equiv="encoding" content="utf-8">
+  <meta http-equiv="nss-type" content="Product Documentation"/>
+  <meta http-equiv="nss-subtype" content="User Guide"/>
+  
+  <meta name="description" content="The capacity pools licensing model is different from the capacity tiers model. Instead of a dedicating storage capacity to each individual node, the storage ...">
+  <meta name="keywords" content=" license, licensing, capacity pools, operation details">
+  
+  
+
+  <!-- Icons -->
+  <link rel="icon" href="/ontap-select/us-en/images/favicon.ico" type="image/x-icon">
+
+  <!-- RSS Feed -->
+  
+
+  <!-- CSS Definitions: NetApp CSS should be defined after generic css -->
+
+  <!-- Elastic Search -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/searchkit/0.10.0/theme.css">
+
+  <!-- LUCI CSS Content -->
+  <link rel="stylesheet" href="/ontap-select/us-en/common/css/esb.min.css">
+  <link rel="stylesheet" href="/ontap-select/us-en/common/css/netapp-library.min.css">
+  <link rel="stylesheet" href="/ontap-select/us-en/common/css/doc.css">
+  <link rel="stylesheet" href="/ontap-select/us-en/common/css/doc-components.css">
+
+  <link rel="stylesheet" href='/ontap-select/us-en/css/na-sidebar.css' type='text/css'>
+  <link rel='stylesheet' href='/ontap-select/us-en/css/na-search.css' type='text/css'>
+  <link rel='stylesheet' href='/ontap-select/us-en/css/clouddocs.css' type='text/css'>
+
+  <!-- Font awesome seems to affect our GitHub Icon and generic "arrow box" for external links. -->
+  <link rel="stylesheet" type="text/css" href="/ontap-select/us-en/css/font-awesome.min.css">
+  <!-- <link rel="stylesheet" href="/ontap-select/us-en/css/customstyles.css"> -->
+  <!-- Controls the shadow effect for search dropdown menu -->
+  <link rel="stylesheet" href="/ontap-select/us-en/css/boxshadowproperties.css">
+
+  <!-- NetApp CSS controls the technical content -->
+  <link rel='stylesheet' href='/ontap-select/us-en/css/netapp.css' type='text/css'>
+
+  
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+  <!-- Used to import Promise for IE. Required for SearchKit -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script>
+  
+    <script src='/ontap-select/us-en/js/na-search.js'></script>
+  
+
+  
+  <link rel='stylesheet' href='/ontap-select/us-en/css/na-pagenav.css' type='text/css' id="pagenav-css">
+  <script src='/ontap-select/us-en/js/na-pagenav.js'></script>
+  
+
+  <link rel='stylesheet' href='/ontap-select/us-en/css/prism.css' type='text/css'>
+  <link rel='stylesheet' href='/ontap-select/us-en/css/prism-netapp.css' type='text/css'>
+
+  <script src='/ontap-select/us-en/js/clouddocs.js'></script>
+  <script src='/ontap-select/us-en/js/s_code_impl.js'></script>
+  <script src='/ontap-select/us-en/js/jquery.navgoco.min.js'></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src='/ontap-select/us-en/js/toc.js'></script>
+  <script src='/ontap-select/us-en/js/customscripts.js'></script>
+
+  <script>
+      $(document).ready(function() {
+          // Initialize navgoco with default options
+          $("#mysidebar").navgoco({
+              caretHtml: '',
+              accordion: true,
+              openClass: 'active', // open
+              save: false, // leave false or nav highlighting doesn't work right
+              cookie: {
+                  name: 'navgoco',
+                  expires: false,
+                  path: '/'
+              },
+              slide: {
+                  duration: 400,
+                  easing: 'swing'
+              }
+          });
+
+          $("#collapseAll").click(function(e) {
+              e.preventDefault();
+              $("#mysidebar").navgoco('toggle', false);
+          });
+
+          $("#expandAll").click(function(e) {
+              e.preventDefault();
+              $("#mysidebar").navgoco('toggle', true);
+          });
+
+      });
+
+  </script>
+  <script>
+      $(document).ready(function() {
+          $("#tg-sb-link").click(function() {
+              $("#tg-sb-sidebar").toggle();
+              $("#tg-sb-content").toggleClass('col-md-9');
+              $("#tg-sb-content").toggleClass('col-md-12');
+              $("#tg-sb-icon").toggleClass('fa-toggle-on');
+              $("#tg-sb-icon").toggleClass('fa-toggle-off');
+          });
+      });
+  </script>
+
+  <!-- Controls the i18n Browser Redirection -->
+  <script>
+    var siteLocales = [];
+    
+      siteLocales.push("us-en");
+    
+
+    standardizeUrl(siteLocales, "clouddocs.netapp.com", "https://docs.netapp.com");
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-81697994-3"></script>
+  <script>
+  if (document.location.hostname === "docs.netapp.com") {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-81697994-3');
+  }
+  </script>
+</head>
+
+
+  <body class="n-doc__component-detail">
+    <a href="#n-main-content" class="visually-hidden">Skip to main content</a>
+<div class="n-off-canvas-menu">
+  <div class="n-off-canvas-menu__menu">
+    <div class="n-off-canvas-menu__menu-inner">
+      <div class="n-off-canvas-menu__property-title"></div>
+      <ul class="n-off-canvas-menu__property-navigation-list">
+        <li class="n-off-canvas-menu__property-navigation-list-item ">
+          <a href="https://docs.netapp.com/us-en/" class="n-off-canvas-menu__property-navigation-link">
+            Home
+          </a>
+          <div class="n-off-canvas-menu__child-menu">
+            <ul class="n-menu__list">
+
+            </ul>
+          </div>
+        </li>
+      </ul>
+
+      <ul class="n-off-canvas-menu__global-navigation-list">
+         <li class="n-off-canvas-menu__global-navigation-list-header">More From NetApp</li>
+         <li class="n-off-canvas-menu__global-navigation-list-item"><a href="#" class="n-off-canvas-menu__global-navigation-link">Netapp.com</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+    <div class="n-off-canvas-menu__content-wrap">
+      <!-- Header -->
+      <header>
+  <!-- Top Hat -->
+  <div class="n-top-hat">
+    <div class="n-container">
+      <div class="n-top-hat__cross-property-nav">
+        <ul class="n-top-hat__list">
+            <li class="n-top-hat__list-item">
+              <a href="http://www.netapp.com" class="n-top-hat__link">NetApp.com</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Property Bar -->
+  <div class="n-property-bar n-property-bar--v3">
+    <div class="n-property-bar__inner-wrap">
+      <div class="n-property-bar__menu-toggle">
+        <a href="#" class="n-property-bar__menu-toggle-link"><span class="n-property-bar__menu-toggle-text">Menu</span><svg class="n-icon-bars n-property-bar__menu-toggle-icon" aria-labelledby="title">
+          <title>bars</title>
+          <use xlink:href="/ontap-select/us-en/common/svg/sprite.svg#bars"></use>
+        </svg></a>
+      </div>
+      <div class="n-property-bar__property-mark n-property-bar__property-mark--has-property-name">
+        <a class="n-property-bar__property-link" href="https://docs.netapp.com">
+          <div class="n-property-bar__logo">
+            <svg class="n-icon-netapp-mark n-property-bar__netapp-mark-icon" aria-labelledby="title">
+              <title>netapp-mark</title>
+              <use xlink:href="/ontap-select/us-en/common/svg/sprite.svg#netapp-mark"></use>
+            </svg>
+            <svg class="n-property-bar__logo-svg" aria-labelledby="title">
+              <title>NetApp</title>
+              <use xlink:href="/ontap-select/us-en/common/svg/sprite.svg#netapp-logo"></use>
+            </svg>
+          </div>
+          <h2 class="n-property-bar__property-name"></h2>
+        </a>
+      </div>
+
+      
+      <div id="search-demo-container" class="n-property-bar__search">
+        <div id="react-search"></div>
+      </div>
+      
+
+      <div id="ie-i18n-menu" class="n-property-bar__utils">
+        <ul class="n-property-navigation-bar__utils-list">
+          <li class="n-property-navigation-bar__utils-list-item ie-i18n-container">
+            <a href="#" class="n-property-navigation-bar__utils-link n-property-navigation-bar__nav-link n-property-navigation-bar__language-selector-toggle ie-i18n-link" data-menu-id="n-property-navigation-bar__menu--language-selector">
+              <span class="ie-i18n-lang">English</span>
+              <svg class="ie-i18n-icon-container" class="n-property-bar__logo-svg" aria-labelledby="title">
+                <title>globe</title>
+                <use xlink:href="/ontap-select/us-en/common/svg/sprite.svg#globe" class="n-icon-globe n-globe__icon"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="n-property-bar__menus">
+      <div id="n-property-navigation-bar__menu--language-selector" class="n-menu n-menu--v3">
+        <div class="n-language-selector-menu">
+          <div class="n-language-selector-menu__header">
+            <span class="n-language-selector-menu__title">Select Your Language</span>
+          </div>
+          <ul class="n-menu__list">
+            <li class="n-menu__list-column">
+              <ul class="n-menu__list">
+                
+                
+                
+                <li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="/ontap-select/us-en/" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
+                </li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+              </ul>
+            </li>
+          </ul>
+          <div class="menu__footer">
+            <p>Current Language: English
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+      <!-- Content -->
+      <main role="main" id="n-main-content" class="n-main-content">
+        <div class="n-container">
+  <div class="n-row">
+    <div class="n-doc n-doc__component-list">
+      <!-- Sidebar Column -->
+      
+      <div class="col-md-3" >
+          
+
+<ul id="mysidebar" class="nav">
+  
+
+  
+    <li><a href="index.html">ONTAP Select 9.7 docs</a></li>
+  
+
+  
+    <!-- Check Container -->
+    <li class="subfolders">
+      <a href="#">Concepts</a>
+      <ul>
+        
+
+  
+    <li><a href="concept_ots_overview.html">Product overview</a></li>
+  
+
+  
+    <li><a href="concept_ots_deploy.html">ONTAP Select Deploy</a></li>
+  
+
+  
+    <!-- Check Container -->
+    <li class="subfolders">
+      <a href="#">Business use cases</a>
+      <ul>
+        
+
+  
+    <li><a href="concept_usecase_overview.html">Business needs and usage scenarios</a></li>
+  
+
+  
+    <li><a href="concept_usecase_robo.html">Remote and branch office</a></li>
+  
+
+  
+    <li><a href="concept_usecase_private_cloud.html">Private cloud and data center</a></li>
+  
+
+  
+    <li><a href="concept_usecase_mc_sds.html">MetroCluster SDS</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+    <li><a href="concept_terminology.html">Terminology</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+    <!-- Check Container -->
+    <li class="subfolders">
+      <a href="#">Plan</a>
+      <ul>
+        
+
+  
+    <li><a href="concept_workflow_deploy.html">Deployment workflow</a></li>
+  
+
+  
+    <!-- Check Container -->
+    <li class="subfolders">
+      <a href="#">ONTAP Select</a>
+      <ul>
+        
+
+  
+    <li><a href="reference_plan_ots_general.html">General requirements</a></li>
+  
+
+  
+    <li><a href="reference_plan_ots_hardware.html">Hypervisor and hardware</a></li>
+  
+
+  
+    <li><a href="reference_plan_ots_storage.html">Storage and RAID</a></li>
+  
+
+  
+    <li><a href="reference_plan_ots_vnas.html">ONTAP Select vNAS</a></li>
+  
+
+  
+    <li><a href="reference_plan_ots_networking.html">Networking</a></li>
+  
+
+  
+    <li><a href="reference_plan_ots_two_node.html">Two-node clusters</a></li>
+  
+
+  
+    <li><a href="reference_plan_ots_robo.html">Remote and branch offices</a></li>
+  
+
+  
+    <li><a href="reference_plan_ots_mcc_sds.html">MetroCluster SDS</a></li>
+  
+
+  
+    <li><a href="reference_plan_ots_vcenter.html">VMware vCenter</a></li>
+  
+
+  
+    <li><a href="reference_plan_ots_plugin.html">VMware vCenter plug-in</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+    <!-- Check Container -->
+    <li class="subfolders">
+      <a href="#">ONTAP Select Deploy</a>
+      <ul>
+        
+
+  
+    <li><a href="reference_plan_dep_general.html">General requirements</a></li>
+  
+
+  
+    <li><a href="reference_plan_dep_vmware.html">VMware environment</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+    <li><a href="reference_plan_best_practices.html">Best practices</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+    <!-- Check Container -->
+    <li class="subfolders">
+      <a href="#">License</a>
+      <ul>
+        
+
+  
+    <!-- Check Container -->
+    <li class="subfolders">
+      <a href="#">Options</a>
+      <ul>
+        
+
+  
+    <li><a href="concept_lic_evaluation.html">Evaluation licences</a></li>
+  
+
+  
+    <li><a href="concept_lic_production.html">Production licences</a></li>
+  
+
+  
+    <li><a href="concept_lic_platforms.html">Platform license offerings</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+    <!-- Check Container -->
+    <li class="subfolders">
+      <a href="#">Capacity pools licensing model</a>
+      <ul>
+        
+
+  
+    <li class="active"><a href="concept_lic_cp_operation.html">Operational details</a></li>
+  
+
+  
+    <li><a href="concept_lic_cp_serial_number.html">Node serial numbers</a></li>
+  
+
+  
+    <li><a href="concept_lic_cp_restrictions.html">Restrictions</a></li>
+  
+
+  
+    <li><a href="concept_lic_cp_compare_ct.html">Capacity pools versus capacity tiers</a></li>
+  
+
+  
+    <li><a href="concept_lic_cp_benefits.html">Summary of benefits</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+    <!-- Check Container -->
+    <li class="subfolders">
+      <a href="#">Purchase</a>
+      <ul>
+        
+
+  
+    <li><a href="concept_lic_workflow.html">Licensing workflow</a></li>
+  
+
+  
+    <li><a href="task_lic_acquire_ct.html">Capacity tiers</a></li>
+  
+
+  
+    <li><a href="task_lic_acquire_cp.html">Capacity pools</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+    <li><a href="reference_lic_ontap_features.html">ONTAP features</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+    <!-- Check Container -->
+    <li class="subfolders">
+      <a href="#">Install</a>
+      <ul>
+        
+
+  
+    <!-- Check Container -->
+    <li class="subfolders">
+      <a href="#">Pre-installation checklist</a>
+      <ul>
+        
+
+  
+    <li><a href="reference_chk_host_prep.html">Host preparation checklist</a></li>
+  
+
+  
+    <li><a href="reference_chk_deploy_req_info.html">Deploy utility required information</a></li>
+  
+
+  
+    <li><a href="reference_chk_select_req_info.html">ONTAP Select required information</a></li>
+  
+
+  
+    <li><a href="task_chk_nvme_configure.html">NVMe host configuration</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+    <li><a href="task_install_deploy.html">Install ONTAP Select Deploy</a></li>
+  
+
+  
+    <li><a href="task_deploy_cluster.html">Deploy a cluster</a></li>
+  
+
+  
+    <li><a href="reference_initial_state.html">Initial cluster state</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+    <!-- Check Container -->
+    <li class="subfolders">
+      <a href="#">Administer</a>
+      <ul>
+        
+
+  
+    <li><a href="concept_adm_before.html">Before you begin</a></li>
+  
+
+  
+    <li><a href="concept_adm_upgrading_nodes.html">Upgrade nodes</a></li>
+  
+
+  
+    <li><a href="task_adm_support.html">Diagnostics and support</a></li>
+  
+
+  
+    <li><a href="task_adm_security.html">Security</a></li>
+  
+
+  
+    <li><a href="task_adm_connectivity.html">Network connectivity</a></li>
+  
+
+  
+    <li><a href="task_adm_mediators.html">Mediators</a></li>
+  
+
+  
+    <li><a href="task_adm_clusters.html">Clusters</a></li>
+  
+
+  
+    <!-- Check Container -->
+    <li class="subfolders">
+      <a href="#">Nodes and hosts</a>
+      <ul>
+        
+
+  
+    <li><a href="task_adm_video_console.html">VM video console</a></li>
+  
+
+  
+    <li><a href="task_adm_resize.html">Resizing the cluster nodes</a></li>
+  
+
+  
+    <li><a href="task_adm_replace_drives_swraid.html">Replacing failed SW RAID drives</a></li>
+  
+
+  
+    <li><a href="task_adm_upgrade_vmfs6.html">Upgrading to VMFS6</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+    <li><a href="task_adm_licenses.html">Licenses</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+    <!-- Check Container -->
+    <li class="subfolders">
+      <a href="#">Deep dive</a>
+      <ul>
+        
+
+  
+    <!-- Check Container -->
+    <li class="subfolders">
+      <a href="#">Storage</a>
+      <ul>
+        
+
+  
+    <li><a href="concept_stor_concepts_chars.html">General concepts and characteristics</a></li>
+  
+
+  
+    <li><a href="concept_stor_hwraid_local.html">Hardware RAID services for local attached storage</a></li>
+  
+
+  
+    <li><a href="concept_stor_swraid_local.html">Software RAID services for local attached storage</a></li>
+  
+
+  
+    <li><a href="concept_stor_vsan_external.html">VSAN and external array configurations</a></li>
+  
+
+  
+    <li><a href="concept_stor_capacity_inc.html">Increasing storage capacity</a></li>
+  
+
+  
+    <li><a href="concept_stor_eff_support.html">Storage efficiency support</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+    <!-- Check Container -->
+    <li class="subfolders">
+      <a href="#">Networking</a>
+      <ul>
+        
+
+  
+    <li><a href="concept_nw_concepts_chars.html">General concepts and characteristics</a></li>
+  
+
+  
+    <li><a href="concept_nw_single_multi_node.html">Single and multi node configuration</a></li>
+  
+
+  
+    <li><a href="concept_nw_internal_external.html">Internal and external networks</a></li>
+  
+
+  
+    <li><a href="concept_nw_supported_configs.html">Supported configurations</a></li>
+  
+
+  
+    <li><a href="concept_nw_vsphere_vswitch_config.html">VMWare vSphere VSwitch configuration</a></li>
+  
+
+  
+    <li><a href="concept_nw_physical_switch_config.html">Physical switch configuration</a></li>
+  
+
+  
+    <li><a href="concept_nw_data_mgmt_separation.html">Data and management separation</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+    <!-- Check Container -->
+    <li class="subfolders">
+      <a href="#">High availability architecture</a>
+      <ul>
+        
+
+  
+    <li><a href="concept_ha_config.html">HA configuration</a></li>
+  
+
+  
+    <li><a href="concept_ha_mirroring.html">Syncronous replication and mirrored aggregates</a></li>
+  
+
+  
+    <li><a href="concept_ha_other.html">Other high availability functions</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+    <!-- Check Container -->
+    <li class="subfolders">
+      <a href="#">Performance</a>
+      <ul>
+        
+
+  
+    <li><a href="concept_perf_general.html">General considerations</a></li>
+  
+
+  
+    <li><a href="concept_perf_premium_ha_direct_ssd_94.html">9.4 Premium HA direct attached SSD storage</a></li>
+  
+
+  
+    <li><a href="concept_perf_premium_ha_direct_ssd_95.html">9.5 Premium HA direct attached SSD storage</a></li>
+  
+
+  
+    <li><a href="concept_perf_premium_ha_direct_ssd_96.html">9.6 Premium HA direct attached SSD storage</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+    <!-- Check Container -->
+    <li class="subfolders">
+      <a href="#">Integrate with vCenter</a>
+      <ul>
+        
+
+  
+    <!-- Check Container -->
+    <li class="subfolders">
+      <a href="#">Getting started</a>
+      <ul>
+        
+
+  
+    <li><a href="concept_vpi_overview.html">Overview</a></li>
+  
+
+  
+    <li><a href="concept_vpi_architecture.html">Architecture</a></li>
+  
+
+  
+    <li><a href="concept_vpi_planning.html">Planning</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+    <!-- Check Container -->
+    <li class="subfolders">
+      <a href="#">Manage the plug-in</a>
+      <ul>
+        
+
+  
+    <li><a href="concept_vpi_manage_before.html">Before you begin</a></li>
+  
+
+  
+    <li><a href="task_vpi_install.html">Install</a></li>
+  
+
+  
+    <li><a href="task_vpi_access.html">Access</a></li>
+  
+
+  
+    <li><a href="task_vpi_upgrade.html">Upgrade and remove</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+    <li><a href="task_vpi_manually_remove.html">Manually remove the plug-in</a></li>
+  
+
+  
+    <li><a href="task_vpi_deploy_cluster.html">Deploy a cluster</a></li>
+  
+
+  
+    <li><a href="concept_vpi_vcenter_integration.html">vCenter integration</a></li>
+  
+
+  
+    <!-- Check Container -->
+    <li class="subfolders">
+      <a href="#">Administer</a>
+      <ul>
+        
+
+  
+    <li><a href="task_vpi_adm_support.html">Diagnostics and support</a></li>
+  
+
+  
+    <li><a href="task_vpi_adm_network.html">Networking</a></li>
+  
+
+  
+    <li><a href="task_vpi_adm_clusters.html">Clusters</a></li>
+  
+
+  
+    <li><a href="task_vpi_adm_licenses.html">Licenses</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+    <li><a href="reference_vpi_troubleshooting.html">Troubleshoot</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+    <!-- Check Container -->
+    <li class="subfolders">
+      <a href="#">Automate with REST</a>
+      <ul>
+        
+
+  
+    <!-- Check Container -->
+    <li class="subfolders">
+      <a href="#">Concepts</a>
+      <ul>
+        
+
+  
+    <li><a href="concept_api_rest.html">REST web services</a></li>
+  
+
+  
+    <li><a href="concept_api_how_access.html">Access the Deploy API</a></li>
+  
+
+  
+    <li><a href="concept_api_versions.html">Deploy API versioning</a></li>
+  
+
+  
+    <li><a href="concept_api_operation.html">Basic operation</a></li>
+  
+
+  
+    <li><a href="concept_api_transaction.html">Request and response transaction</a></li>
+  
+
+  
+    <li><a href="concept_api_async_proc.html">Asynchronous processing</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+    <!-- Check Container -->
+    <li class="subfolders">
+      <a href="#">Access with a browser</a>
+      <ul>
+        
+
+  
+    <li><a href="concept_api_before_browser.html">Before you begin</a></li>
+  
+
+  
+    <li><a href="task_api_access_doc_page.html">Access the doc page</a></li>
+  
+
+  
+    <li><a href="task_api_understanding_call.html">Understanding an API call</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+    <!-- Check Container -->
+    <li class="subfolders">
+      <a href="#">Workflow processes</a>
+      <ul>
+        
+
+  
+    <li><a href="concept_api_before_workflows.html">Before you begin</a></li>
+  
+
+  
+    <li><a href="reference_api_workflow01.html">Workflow 1 Creating a cluster</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+    <!-- Check Container -->
+    <li class="subfolders">
+      <a href="#">Access with Python</a>
+      <ul>
+        
+
+  
+    <li><a href="concept_api_before_python.html">Before you begin</a></li>
+  
+
+  
+    <li><a href="concept_api_understanding_scripts.html">Understanding the scripts</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+    <!-- Check Container -->
+    <li class="subfolders">
+      <a href="#">Python code samples</a>
+      <ul>
+        
+
+  
+    <li><a href="reference_api_script_cc.html">Create a cluster</a></li>
+  
+
+  
+    <li><a href="reference_api_json_cc.html">JSON to create a cluster</a></li>
+  
+
+  
+    <li><a href="reference_api_script_anl.html">Add a node license</a></li>
+  
+
+  
+    <li><a href="reference_api_script_dc.html">Delete a cluster</a></li>
+  
+
+  
+    <li><a href="reference_api_script_common.html">Common support module</a></li>
+  
+
+  
+    <li><a href="reference_api_script_resize.html">Resize cluster nodes</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+    <li><a href="concept_automate_ansible.html">Automate with Ansible</a></li>
+  
+
+  
+    <!-- Check Container -->
+    <li class="subfolders">
+      <a href="#">Use the CLI</a>
+      <ul>
+        
+
+  
+    <li><a href="concept_cli_before.html">Before you begin</a></li>
+  
+
+  
+    <li><a href="task_cli_signing_in.html">Sign in using SSH</a></li>
+  
+
+  
+    <li><a href="task_cli_deploy_cluster.html">Deploy a cluster</a></li>
+  
+
+  
+    <li><a href="task_cli_security.html">Security</a></li>
+  
+
+  
+    <li><a href="task_cli_connectivity.html">Network connectivity</a></li>
+  
+
+  
+    <li><a href="task_cli_clusters.html">Clusters</a></li>
+  
+
+  
+    <!-- Check Container -->
+    <li class="subfolders">
+      <a href="#">Nodes and hosts</a>
+      <ul>
+        
+
+  
+    <li><a href="task_cli_upgrade_esxi65.html">Upgrading ESXi to 6.5 and higher</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+    <!-- Check Container -->
+    <li class="subfolders">
+      <a href="#">Deploy utility</a>
+      <ul>
+        
+
+  
+    <li><a href="task_cli_upgrade_deploy.html">Upgrade a Deploy instance</a></li>
+  
+
+  
+    <li><a href="task_cli_migrate_deploy.html">Migrate a Deploy instance</a></li>
+  
+
+  
+    <li><a href="task_cli_deploy_image_add.html">Add ONTAP Select images</a></li>
+  
+
+  
+    <li><a href="task_cli_deploy_image_remove.html">Remove ONTAP Select images</a></li>
+  
+
+  
+    <li><a href="task_cli_deploy_recover_two_node.html">Recover Deploy for a two-node cluster</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+    <li><a href="reference_faq.html">FAQ</a></li>
+  
+
+  
+    <li><a href="reference_additional_info.html">Get more information</a></li>
+  
+
+  
+    <li><a href="reference_earlier_versions.html">Earlier versions</a></li>
+  
+
+  
+    <li><a href="reference_legal_notices.html">Legal notices</a></li>
+  
+
+
+</ul>
+
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+      </div>
+      
+
+      <div class="n-doc__component-detail-content n-doc__component-detail-content--show-code">
+        <!-- Begin of page container -->
+        <article class="page-content">
+          
+
+<div class="n-doc__component-detail-heading-wrap">
+  <h1 class="n-doc__component-detail-heading">Operational details
+    <span>
+      
+        <a target="_blank" href="https://github.com/NetAppDocs/ontap-select/blob/master/concept_lic_cp_operation.adoc" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit on GitHub</a>
+        <a target="_blank" href="https://github.com/NetAppDocs/ontap-select/issues/new?body=Page%3A%20[Operational details](https://docs.netapp.com/us-en/ontap-select/concept_lic_cp_operation.html)" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Request doc changes</a>
+      
+    </span>
+  </h1>
+</div>
+
+<p class="page-details">
+
+<time datetime="2019-11-21 15:53:38 +0000">11/21/2019</time>
+
+
+</p>
+
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph lead">
+<p>The capacity pools licensing model is different from the capacity tiers model. Instead of a dedicating storage capacity to each individual node, the storage capacity is allocated to a pool and shared among many nodes. Additional components and processes have been created to support the capacity pools model.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="license-manager">License Manager</h3>
+<div class="paragraph">
+<p>The License Manager is a software component introduced with ONTAP Select 9.5 using ONTAP Select Deploy 2.10. LM runs as a separate process within each instance of the Deploy administration utility. Some of the functions provided by LM include:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Generate a unique twenty-digit serial number for each node based on the capacity pool license serial number</p>
+</li>
+<li>
+<p>Create leases for capacity from the shared capacity pools based on requests from the ONTAP Select nodes</p>
+</li>
+<li>
+<p>Report pool usage information through the Deploy user interface</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="lease-characteristics">Lease characteristics</h3>
+<div class="paragraph">
+<p>The storage allocated for every data aggregate at a node using a capacity pool license must have an associated lease. The node requests a storage lease and if the capacity is available, the License Manager responds with a lease. Each lease has the following explicit or implicit attributes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>License Manager<br>
+Every ONTAP Select node is associated with one License Manager instance</p>
+</li>
+<li>
+<p>Capacity pool<br>
+Every ONTAP Select node is associated with one capacity pool</p>
+</li>
+<li>
+<p>Storage allocation<br>
+A specific capacity value is assigned in the lease</p>
+</li>
+<li>
+<p>Expiration date and time<br>
+Leases have a duration of between one hour and seven days depending on the user configuration.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="license-lock-id">License Lock ID</h3>
+<div class="paragraph">
+<p>Each instance of the License Manager, and therefore each corresponding Deploy utility instance, is identified with a unique 128-bit number. This number is combined with the nine-digit capacity pool license serial number to lock the pool to a specific License Manager instance (which is effectively a Deploy instance). You must provide both values at the NetApp support site as part of generating the NetApp License File (NLF).</p>
+</div>
+<div class="paragraph">
+<p>You can determine the License Lock ID for your Deploy instance using the web user interface in the following ways:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Getting Started page<br>
+This page is displayed when you first sign in to Deploy. You can also display the page by clicking the drop down box at the top right of the page and selecting Getting Started. The LLID is displayed in the Add Licenses section.</p>
+</li>
+<li>
+<p>Administration<br>
+Click the <strong>Administration</strong> tab a the top of the page, then click <strong>Systems</strong> and <strong>Settings</strong>.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="basic-lease-operations">Basic lease operations</h3>
+<div class="paragraph">
+<p>An ONTAP Select node must locate or request a valid capacity lease every time a data aggregate is created, expanded, or changed. A lease obtained from a previous request that is still valid can be used, or a new lease can be requested if needed. The following steps are taken by the ONTAP Select node to locate a capacity pool lease:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>If an existing lease is located at the node, it is used as long as all of the following are true:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Lease has not expired</p>
+</li>
+<li>
+<p>Storage request for the aggregate does not exceed the lease capacity</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>If an existing lease cannot be located, the node requests a new lease from the License Manager.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="returning-storage-capacity-to-a-capacity-pool">Returning storage capacity to a capacity pool</h3>
+<div class="paragraph">
+<p>Storage capacity is allocated from a capacity pool as needed and each new request can reduce the available storage in the pool. Storage capacity is returned to the pool in several situations, including:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Lease for a data aggregate expires and is not renewed by the node</p>
+</li>
+<li>
+<p>Data aggregate is deleted</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If an ONTAP Select virtual machine is deleted, any active leases remain in effect until they expire. When this occurs, the capacity is returned to the pool.
+</td>
+</tr>
+</table>
+</div>
+</div>
+
+        </article>
+        <!-- Page Container -->
+      </div>
+
+      
+      <div class="page-nav-container">
+        <nav class="page-nav-fixed">
+          <div class="page-nav-title">On this page:</div>
+          <ul class="page-nav-inner" id="page-menu"></ul>
+        </nav>
+      </div>
+      
+
+    </div>
+  </div>
+</div>
+
+      </main>
+
+      <!-- Footer -->
+      
+      <footer class="n-footer n-footer--v1" style="border-top: solid 10px #DFDFDF;">
+        <div class="n-footer__bottom">
+          <div class="n-container">
+            <div class="n-footer__bottom-left">
+              <div class="n-footer__copyright">
+                  <a href="//www.netapp.com/us/legal/copyright.aspx" class="n-footer__copyright-link">© 2019 NetApp, Inc.</a>
+              </div>
+              <div class="n-footer__copyright">
+                <a href="//www.netapp.com/us/legal/index.aspx" class="n-footer__copyright-link">Legal</a>
+              </div>
+              <div class="n-footer__social-links n-footer__copyright">
+                <ul class="n-footer__social-link-list">
+                  <li class="n-footer__social-link-list-item">
+                    <a class="n-footer__social-link" data-ntap-social="follow-blog" href="http://blog.netapp.com" target="_blank" title="blog" alt="blog">
+                      <span class="n-footer__social-link-text">blog</span>
+                      <svg class="n-icon-blog n-footer__social-link-icon" aria-labelledby="title">
+                        <title>blog@</title>
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ontap-select/us-en/common/svg/sprite.svg#blog"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="n-footer__social-link-list-item">
+                    <a class="n-footer__social-link" data-ntap-social="follow-community" href="http://community.netapp.com/" target="_blank" title="community" alt="community">
+                      <span class="n-footer__social-link-text">community</span>
+                      <svg class="n-icon-twitter n-footer__social-link-icon" aria-labelledby="title">
+                        <title>community@</title>
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ontap-select/us-en/common/svg/sprite.svg#comments"></use>
+                      </svg>
+                    </a>
+                  </li>
+
+                  <li class="n-footer__social-link-list-item">
+                    <a class="n-footer__social-link" data-ntap-social="follow-twitter" href="https://twitter.com/netappdoc" target="_blank" title="twitter" alt="twitter">
+                      <span class="n-footer__social-link-text">twitter</span>
+                      <svg class="n-icon-twitter n-footer__social-link-icon" aria-labelledby="title">
+                        <title>twitter@</title>
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ontap-select/us-en/common/svg/sprite.svg#twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="n-footer__social-link-list-item">
+                    <a class="n-footer__social-link" data-ntap-social="follow-youtube" href="https://www.youtube.com/user/NetAppTechCommTV/" target="_blank" title="youtube" alt="youtube">
+                      <span class="n-footer__social-link-text">youtube</span>
+                      <svg class="n-icon-youtube n-footer__social-link-icon" aria-labelledby="title">
+                        <title>youtube@</title>
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ontap-select/us-en/common/svg/sprite.svg#youtube"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="n-footer__bottom-right">
+              <div class="n-footer__copyright">
+                <a href="https://docs.netapp.com/us-en/contribute/" class="n-footer__copyright-link">Contribute</a>
+              </div>
+              <div class="n-footer__copyright">
+                <a target="_self" class="n-footer__copyright-link" href="javascript:netapp_mailto()">Email your feedback</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+
+    <script src="/ontap-select/us-en/common/js/components.js"></script>
+    <script src="/ontap-select/us-en/common/js/doc-components.js"></script>
+
+    <!-- Elasticsearch JS -->
+    <script type="text/javascript" src='/ontap-select/us-en/js/bundle.js'></script>
+
+    <!-- Syntax Highlighting -->
+    <script type="text/javascript" src='/ontap-select/us-en/js/prism.js'></script>
+    <script type="text/javascript" src='/ontap-select/us-en/js/prism-curl.js'></script>
+
+  </body>
+
+  
+</html>
