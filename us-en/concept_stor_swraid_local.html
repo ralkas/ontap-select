@@ -1187,7 +1187,7 @@
 
 <p class="page-details">
 
-<time datetime="2019-11-21 21:35:09 +0000">11/21/2019</time>
+<time datetime="2019-12-12 15:36:55 +0000">12/12/2019</time>
 
 
 </p>
@@ -1342,7 +1342,7 @@ With the current release, it is not possible to further separate the ONTAP Selec
 <p><span class="image"><img src="./media/ST_20.jpg" alt="RDD disk partitioning for multinode clusters (HA pairs)"></span></p>
 </div>
 <div class="paragraph">
-<p>ONTAP software RAID supports the following RAID types: RAID 4, RAID-DP, and RAID-TEC. These are the same RAID constructs used by FAS and AFF platforms. However, ONTAP Select HA uses a shared-nothing architecture that replicates each node’s configuration to the other node. That means each node must store its root partition and a copy of the its peer’s root partition. Since a data disk has a single root partition, that the minimum number of data disks will vary depending on whether the ONTAP Select node is part of an HA pair or not.</p>
+<p>ONTAP software RAID supports the following RAID types: RAID 4, RAID-DP, and RAID-TEC. These are the same RAID constructs used by FAS and AFF platforms. For root provisioning ONTAP Select supports only RAID 4 and RAID-DP. When using RAID-TEC for the data aggregate, the overall protection is RAID-DP. ONTAP Select HA uses a shared-nothing architecture that replicates each node’s configuration to the other node. That means each node must store its root partition and a copy of the its peer’s root partition. Since a data disk has a single root partition, that the minimum number of data disks will vary depending on whether the ONTAP Select node is part of an HA pair or not.</p>
 </div>
 <div class="paragraph">
 <p>For single node clusters, all data partitions are used to store local (active) data. For nodes that are part of an HA pair, one data partition is used to store local (active) data for that node and the second data partition is used to mirror active data from the HA peer.</p>
@@ -1455,42 +1455,53 @@ Plex: -This UID can be matched with the device UID displayed in the ‘storage d
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>rx254023::&gt; aggr plex delete -aggregate aggr_22a -plex plex0
-Warning: Deleting plex "plex0" of mirrored aggregate "aggr_22a" in a non-shared
-HA configuration will disable its synchronous mirror protection and
-may disable negotiated takeover of node "sdot-rx2540-22a" when
-aggregate "aggr_22a" is online.
+<pre>C3111E67::&gt; storage aggregate plex delete -aggregate aggr1 -plex plex1
+Warning: Deleting plex "plex1" of mirrored aggregate "aggr1" in a non-shared HA configuration will disable its synchronous mirror protection and disable
+         negotiated takeover of node "sti-rx2540-335a" when aggregate "aggr1" is online.
 Do you want to continue? {y|n}: y
-[Job 53] Job succeeded: DONE
-rx254023::&gt; aggr mirror -aggregate aggr_22a
-Info: Disks would be added to aggregate "aggr_22a" on node "sdot-rx2540-22a" in the following manner:
-Second Plex
-RAID Group rg0, 2 disks (advanced_zoned checksum, raid4)
-Position Disk Type Size
----------- ------------------------- ---------- ---------------
-shared NET-1.5 SSD -
-shared NET-1.6 SSD 424.6GB
-Aggregate capacity available for volume use would be 363.0GB.
+[Job 78] Job succeeded: DONE
+
+C3111E67::&gt; storage aggregate mirror -aggregate aggr1
+Info: Disks would be added to aggregate "aggr1" on node "sti-rx2540-335a" in the following manner:
+      Second Plex
+        RAID Group rg0, 5 disks (advanced_zoned checksum, raid_dp)
+                                                            Usable Physical
+          Position   Disk                      Type           Size     Size
+          ---------- ------------------------- ---------- -------- --------
+          shared     NET-3.2                   SSD               -        -
+          shared     NET-3.3                   SSD               -        -
+          shared     NET-3.4                   SSD         208.4GB  208.4GB
+          shared     NET-3.5                   SSD         208.4GB  208.4GB
+          shared     NET-3.12                  SSD         208.4GB  208.4GB
+
+      Aggregate capacity available for volume use would be 526.1GB.
+      625.2GB would be used from capacity license.
 Do you want to continue? {y|n}: y
-Mirroring of aggregate "aggr_22a" has been initiated. 1 disk needs to be zeroed before it can be added to the aggregate. The process has been initiated. Once zeroing completes on this disk, all disks will be added at once. Note that if the system reboots before the disk zeroing is complete, an inactive plex will exist with no disks. The inactive plex can be removed manually. Use the "storage aggregate plex delete" command to delete the inactive plex.
-rx254023::&gt; aggr show-status aggr_22a
-Owner Node: sdot-rx2540-22a
-Aggregate: aggr_22a (online, raid4, mirrored) (advanced_zoned checksums)
-Plex: /aggr_22a/plex1 (online, normal, active, pool1)
-RAID Group /aggr_22a/plex1/rg0 (normal, advanced_zoned checksums)
-Usable Physical
-Position Disk Pool Type RPM Size Size Status
--------- --------------------------- ---- ----- ------ -------- -------- ----------
-shared NET-3.4 1 SSD - 418.0GB 894.3GB (normal)
-shared NET-3.6 1 SSD - 418.0GB 894.3GB (normal)
-Plex: /aggr_22a/plex3 (online, normal, active, pool0)
-RAID Group /aggr_22a/plex3/rg0 (normal, advanced_zoned checksums)
-Usable Physical
-Position Disk Pool Type RPM Size Size Status
--------- --------------------------- ---- ----- ------ -------- -------- ----------
-shared NET-1.5 0 SSD - 418.0GB 894.3GB (normal)
-shared NET-1.6 0 SSD - 418.0GB 894.3GB (normal)
-4 entries were displayed.</pre>
+
+C3111E67::&gt; storage aggregate show-status -aggregate aggr1
+Owner Node: sti-rx2540-335a
+ Aggregate: aggr1 (online, raid_dp, mirrored) (advanced_zoned checksums)
+  Plex: /aggr1/plex0 (online, normal, active, pool0)
+   RAID Group /aggr1/plex0/rg0 (normal, advanced_zoned checksums)
+                                                              Usable Physical
+     Position Disk                        Pool Type     RPM     Size     Size Status
+     -------- --------------------------- ---- ----- ------ -------- -------- ----------
+     shared   NET-1.1                      0   SSD        -  205.1GB  447.1GB (normal)
+     shared   NET-1.2                      0   SSD        -  205.1GB  447.1GB (normal)
+     shared   NET-1.3                      0   SSD        -  205.1GB  447.1GB (normal)
+     shared   NET-1.10                     0   SSD        -  205.1GB  447.1GB (normal)
+     shared   NET-1.11                     0   SSD        -  205.1GB  447.1GB (normal)
+  Plex: /aggr1/plex3 (online, normal, active, pool1)
+   RAID Group /aggr1/plex3/rg0 (normal, advanced_zoned checksums)
+                                                              Usable Physical
+     Position Disk                        Pool Type     RPM     Size     Size Status
+     -------- --------------------------- ---- ----- ------ -------- -------- ----------
+     shared   NET-3.2                      1   SSD        -  205.1GB  447.1GB (normal)
+     shared   NET-3.3                      1   SSD        -  205.1GB  447.1GB (normal)
+     shared   NET-3.4                      1   SSD        -  205.1GB  447.1GB (normal)
+     shared   NET-3.5                      1   SSD        -  205.1GB  447.1GB (normal)
+     shared   NET-3.12                     1   SSD        -  205.1GB  447.1GB (normal)
+10 entries were displayed..</pre>
 </div>
 </div>
 <div class="admonitionblock note">
@@ -1507,7 +1518,7 @@ In order to test or simulate one or multiple drive failures, use the <code>stora
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>set diag
+<pre>set advanced
 disk unfail -disk NET-x.y -spare true
 disk show -broken</pre>
 </div>
