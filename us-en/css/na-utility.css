@@ -1,26 +1,21 @@
-/* .ie-breadcrumb {
-  float: left;
-  font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
-  font-weight: 300;
-  line-height: 1.5;
-  font-size: 14px;
-  color: #686868;
-  padding-top: 24px;
-  padding-bottom: 24px;
-  padding-left: 12px;
-  padding-right: 12px;
-}
-
-.ie-breadcrumb-item {
-  display: inline-block;
-  margin-bottom: 0px;
-  vertical-align: middle;
-} */
-
 .n-breadcrumb {
   display: none;
-  padding-top: 18px;
+  padding-top: 0px;
   margin-left: 12px;
+  vertical-align: middle;
+  height: 70px;
+  line-height: 70px;
+}
+
+.n-breadcrumb__list {
+  display: inline-block;
+  position: relative;
+  line-height: .5;
+  vertical-align: middle;
+}
+
+.n-breadcrumb__list-item {
+  vertical-align: middle;
 }
 
 .ie-utility {
@@ -43,13 +38,13 @@
   text-align: left;
 }
 
-#search-demo-container div._Search_display_wrapper {
+.search div._Search_display_wrapper {
     box-shadow: 2px 3px 2px #dedede;
     background-color: white;
     border-left: 1px solid #dedede;
     direction: ltr;
     display: none; /* Initial Value */
-    font-family: 'Gotham Narrow SSm A','Gotham Narrow SSm B',Helvetica,Arial,sans-serif;
+    font-family: proxima-nova,Arial,"Helvetica Neue",Helvetica,sans-serif;
     font-size: 100%;
     height: 400px;
     line-height: 1.6;
@@ -61,18 +56,17 @@
     left: auto;
     text-align: left;
     width: 350px;
-    /* top: 50px; */
+    top: 50px;
     z-index: 200;
 }
 
 div._Search_display_wrapper em {
-  color: #4A832E;
   font-weight: bold;
-  /* font-style: normal; */
+  font-style: normal;
 }
 
 .sk-search-box {
-  min-width: 150px;
+  width: 150px;
 }
 
 .sk-search-box__icon {
@@ -81,7 +75,7 @@ div._Search_display_wrapper em {
 
 #search-demo-container div.search__results {
   height: 350px;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .search-category {
@@ -92,8 +86,34 @@ div._Search_display_wrapper em {
 
 .search__results small.sk-hits-hit__hightlights {
   float: left;
-  font-size: 12px;
-  margin-left: 20px;
+  font-size: 13px;
+  margin-left: 30px;
+  line-height: 1.4;
+}
+
+.sk-hits-hit__title {
+  font-size: 16px;
+  margin-left: 15px;
+  padding: 5px 0px;
+}
+
+.search .sk-hits-stats__info {
+  display: none;
+}
+
+.search__all .sk-hits-stats__info {
+  display: block;
+}
+
+._Search_display_wrapper .search__all {
+  margin-left: 15px;
+  font-size: 14px;
+  padding: 15px
+}
+
+#search-demo-container button.search-all-icon {
+  position: absolute;
+  left: 5px;
 }
 
 .search {
@@ -119,7 +139,30 @@ button.n-property-bar__search-toggle-button {
 }
 
 .sk-search-box input.sk-search-box__text {
-    height: 34px;
+  height: 34px;
+}
+
+.search__all input.sk-search-box__text {
+  border-radius: 6px;
+  color: #454545 !important;
+  padding-left: 40px;
+  border: 1px solid #A6A8AB;
+  width: 250px;
+  background: #FFF;
+  -webkit-box-flex: unset;
+  -webkit-flex: unset;
+  -ms-flex: unset;
+  flex: unset;
+}
+
+.search__all ._Search_display_wrapper {
+  box-shadow: none;
+  display: inline-block;
+  left: 0px;
+  position: relative;
+  width: auto;
+  border: none;
+  top: 0px;
 }
 
 .sk-hits-hit.sk-hits__item>a:after {
@@ -127,18 +170,22 @@ button.n-property-bar__search-toggle-button {
 }
 
 /* Results Page */
-.search__results__all .sk-hits-hit.sk-hits__item {
-  margin-top: 20px;
+.search__results__all {
+  margin-top: 24px;
 }
 
 .search__results__all small.sk-hits-hit__hightlights {
   float: left;
-  font-size: 12px;
-  margin-left: 20px;
-  margin-top: 10px;
+  font-size: 16px;
+  margin: 0 0 24px 30px;
+  font-family: proxima-nova,Arial,"Helvetica Neue",Helvetica,sans-serif;
 }
 
-
+.search__results__all div.sk-hits-hit__title {
+  font-size: 20px;
+  margin: 0 0 12px 0;
+  font-family: proxima-nova,Arial,"Helvetica Neue",Helvetica,sans-serif;
+}
 
 /* Search Start */
 .n-property-bar__search--exp {
@@ -167,6 +214,7 @@ button.n-property-bar__search-toggle-button {
   .ie-utility {
     display: block;
     height: 140px;
+    margin-left: 20px;
   }
 
   .n-breadcrumb {
@@ -191,7 +239,7 @@ button.n-property-bar__search-toggle-button {
   }
 
   .sk-search-box {
-    min-width: 250px;
+    width: 250px;
   }
 
   .sk-search-box input.sk-search-box__text {
@@ -207,9 +255,14 @@ button.n-property-bar__search-toggle-button {
   .ie-utility {
     display: block;
     height: 70px;
+    margin-left: 0px;
   }
 
   .n-property-bar__toolbar {
     float: right;
+  }
+
+  .n-breadcrumb__list {
+    width: calc(100vw - 450px);
   }
 }
