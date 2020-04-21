@@ -41,20 +41,22 @@
   <link rel="stylesheet" href="/ontap-select/css/boxshadowproperties.css">
 
   <!-- NetApp CSS controls the technical content -->
-  <link rel='stylesheet' href='/ontap-select/css/netapp.css' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="/ontap-select/css/netapp.css">
 
   <!-- WWW CSS Content -->
-  <link rel="stylesheet" href="https://www.netapp.com/us/static/css/luci-dotcom.min.css?v10007269030243">
-  <link rel="stylesheet" href="https://www.netapp.com/us/static/css/netapp-dotcom.css?v10007269030243">
-  <link href="https://www.netapp.com/us/static/css/netapp-library-critical.min.css?v10007269030243" media="all" rel="stylesheet">
-  <link rel="stylesheet" href="https://www.netapp.com/us/static/css/netapp-library-non-critical.min.css?v10007269030243" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="stylesheet" href="https://www.netapp.com/us/static/css/netapp-library-global-header-footer.min.css">
+  <link rel="stylesheet" type="text/css" href="/ontap-select/css/www-luci-dotcom.min.css">
+  <link rel="stylesheet" type="text/css" href="/ontap-select/css/www-netapp-dotcom.css">
+  <link rel="stylesheet" href="/ontap-select/css/www-netapp-library-critical.min.css" media="all" >
+  <link rel="stylesheet" href="/ontap-select/css/www-netapp-library-non-critical.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="stylesheet" href="/ontap-select/css/www-netapp-library-global-header-footer.min.css">
 
   <!-- NetApp IE Customizations -->
   <link rel="stylesheet" href='/ontap-select/css/na-utility.css' type='text/css'>
   <link rel="stylesheet" href='/ontap-select/css/na-sidebar.css' type='text/css'>
   <link rel='stylesheet' href='/ontap-select/css/clouddocs.css' type='text/css'>
   <link rel='stylesheet' href='/ontap-select/css/na-pagenav.css' type='text/css'>
+
+  
 
   
   <link rel='stylesheet' href='/ontap-select/css/na-feature.css' type='text/css'>
@@ -80,7 +82,7 @@
 <script src='/ontap-select/js/na-utility.js'></script>
   <script src='/ontap-select/js/clouddocs.js'></script>
   
-  <script src='/ontap-select/js/s_code_impl-v2.js'></script>
+  <script src='/ontap-select/js/s_code_impl.js'></script>
   
 
   <script src='/ontap-select/js/jquery.navgoco.min.js'></script>
@@ -147,9 +149,7 @@
     
 
     standardizeUrl(siteLocales, "clouddocs.netapp.com", "https://docs.netapp.com");
-  </script>
-
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-81697994-3"></script>
+  </script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-81697994-3"></script>
   <script>
   if (document.location.hostname === "docs.netapp.com") {
     window.dataLayer = window.dataLayer || [];
@@ -739,95 +739,97 @@
 </header>
 
         <div class="ie-utility">
-  <div class="n-property-bar__toolbar">
-    <!-- Start Language Selector -->
-    <div id="ie-i18n" class="n-property-bar__lang-selector">
-      <div id="ie-i18n-menu">
-      <span class="ie-i18n-lang">English</span>
-        <button class="ie-i18n-icon-container" type="button">
-          <svg class="n-globe__icon" aria-labelledby="title">
-            <title>globe</title>
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ontap-select/common/svg/sprite.svg#globe"></use>
-          </svg>
-        </button>
-      </div>
+  <div class="ie-menu">
+    <div class="n-property-bar__toolbar">
+      <!-- Start Language Selector -->
+      <div id="ie-i18n" class="n-property-bar__lang-selector">
+        <div id="ie-i18n-menu">
+        <span class="ie-i18n-lang">English</span>
+          <button class="ie-i18n-icon-container" type="button">
+            <svg class="n-globe__icon" aria-labelledby="title">
+              <title>globe</title>
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ontap-select/common/svg/sprite.svg#globe"></use>
+            </svg>
+          </button>
+        </div>
 
-      <div id="n-property-navigation-bar__menu--language-selector" class="ie-i18n-results-container n-menu n-menu--v3 n-menu--is-active" style="display: none; right: auto;">
-        <div class="n-language-selector-menu">
-          <div class="n-language-selector-menu__header">
-            <span class="n-language-selector-menu__title">Select Your Language</span>
-          </div>
-          <ul class="n-menu__list">
-            <li class="n-menu__list-column">
-              <ul class="n-menu__list">
-                
-                
-                
-                <li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="/ontap-select/us-en/" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
-                </li>
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-              </ul>
-            </li>
-          </ul>
-          <div class="menu__footer">
-            <p>Current Language: English
-            </p>
+        <div id="n-property-navigation-bar__menu--language-selector" class="ie-i18n-results-container n-menu n-menu--v3 n-menu--is-active" style="display: none; right: auto;">
+          <div class="n-language-selector-menu">
+            <div class="n-language-selector-menu__header">
+              <span class="n-language-selector-menu__title">Select Your Language</span>
+            </div>
+            <ul class="n-menu__list">
+              <li class="n-menu__list-column">
+                <ul class="n-menu__list">
+                  
+                  
+                  
+                  <li class="n-menu__list-item n-menu__list-item--level-1">
+                    <a href="/ontap-select/us-en/" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
+                  </li>
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                </ul>
+              </li>
+            </ul>
+            <div class="menu__footer">
+              <p>Current Language: English
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <!-- End Language Selector -->
+      <!-- End Language Selector -->
 
-    <div class="n-property-bar__cta"></div>
+      <div class="n-property-bar__cta"></div>
 
-    
-    <div id="search-demo-container" class="searchbox n-property-bar__search">
-      <div id="react-search"></div>
-      <button class="n-property-bar__search-toggle-button" type="button">
-        <svg class="n-icon-search n-property-bar__search-toggle-button-icon" aria-labelledby="title">
-          <title>search</title>
-          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ontap-select/common/svg/sprite.svg#search"></use>
-        </svg>
-      </button>
-    </div>
-    
-  </div>
-
-  <div class="n-breadcrumb">
-    <ul class="n-breadcrumb__list">
-      <li class="n-breadcrumb__list-item">
-        <a href="https://www.netapp.com">Home</a>
-      </li>
-      <li class="n-breadcrumb__list-item">
-        <a href="https://docs.netapp.com">Documentation</a>
-      </li>
       
+      <div id="search-demo-container" class="searchbox n-property-bar__search">
+        <div id="react-search"></div>
+        <button class="n-property-bar__search-toggle-button" type="button">
+          <svg class="n-icon-search n-property-bar__search-toggle-button-icon" aria-labelledby="title">
+            <title>search</title>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ontap-select/common/svg/sprite.svg#search"></use>
+          </svg>
+        </button>
+      </div>
+      
+    </div>
 
-      <li class="n-breadcrumb__list-item">
-        <a href="/ontap-select/">ONTAP&nbsp;Select</a>
-      </li>
-      <li class="n-breadcrumb__list-item">
-        Asynchronous processing using the job object
-      </li>
-    </ul>
+    <div class="n-breadcrumb">
+      <ul class="n-breadcrumb__list">
+        <li class="n-breadcrumb__list-item">
+          <a href="https://www.netapp.com">Home</a>
+        </li>
+        <li class="n-breadcrumb__list-item">
+          <a href="https://docs.netapp.com">Documentation</a>
+        </li>
+        
+
+        <li class="n-breadcrumb__list-item">
+          <a href="/ontap-select/">ONTAP&nbsp;Select</a>
+        </li>
+        <li class="n-breadcrumb__list-item">
+          Asynchronous processing using the job object
+        </li>
+      </ul>
+    </div>
+
+    <div style="clear: both"></div><!-- Main needs to have height -->
   </div>
-
-  <div style="clear: both"></div><!-- Main needs to have height -->
 </div>
 
 
@@ -837,843 +839,1193 @@
   <!-- Sidebar Column -->
   
   <div class="col-md-3" >
-      
-
-
-
-<div class="n-pdf-header">
+      <div class="n-pdf-header">
   <a id="toggleButtonPdf" class="n-pdf-button" type="button">
-    &vellip; Download PDF
+    Download PDF
     <span>
       <img src="/ontap-select/images/pdf.png" width="20" height="20"/>
     </span>
   </a>
 </div>
-<ul id="toggleContainerPdf" class="n-pdf-body" style="display:none;">
-  
-    
-
-    <div class="n-pdf-section">
+<ul id="toggleContainerPdf" class="n-pdf-body" style="display:none;"><div class="n-pdf-section">
       <span class="n-pdf-section-title">
-        Site 
+        Site
       </span>
     </div>
     <li>
-      <a target="_blank" href="/ontap-select/pdfs/fullsite-sidebar/ONTAP_Select_9_7_docs.pdf" >
+      <a target="_blank" href="/ontap-select/pdfs/fullsite-sidebar/ONTAP_Select_documentation.pdf" >
         <img src="/ontap-select/images/pdf.png" width="20" height="20"/>
-        ONTAP Select 9.7 docs
+        ONTAP Select documentation
       </a>
     </li>
-   
-  
   
 
+
   
-    <span class="subfolders" style="display:none;">
-      
-        <div class="n-pdf-section">
-          <span class="n-pdf-section-title">
-            Sections
-          </span>
-        </div>
-      
-      <li>
-        <a target="_blank" href="/ontap-select/pdfs/sidebar/Concepts.pdf" >
-          <img src="/ontap-select/images/pdf.png" width="20" height="20"/>
-          Concepts
-        </a>
-      </li>
-      <span>
+
+    
+      <span class="subfolders" style="display:none;">
         
-  
-
-  
-
-  
-    <span class="subfolders" style="display:none;">
-      
-      <li>
-        <a target="_blank" href="/ontap-select/pdfs/sidebar/Business_use_cases.pdf" >
-          <img src="/ontap-select/images/pdf.png" width="20" height="20"/>
-          Business use cases
-        </a>
-      </li>
-      <span>
+          <div class="n-pdf-section">
+            <span class="n-pdf-section-title">
+              
+                Sections
+              
+            </span>
+          </div>
         
+        <li>
+          <a target="_blank" href="/ontap-select/pdfs/sidebar/Concepts.pdf" >
+            <img src="/ontap-select/images/pdf.png" width="20" height="20"/>
+            Concepts
+          </a>
+        </li>
+        <span>
+          
   
 
-  
 
   
 
+
+  
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/ontap-select/pdfs/sidebar/Business_use_cases.pdf" >
+            <img src="/ontap-select/images/pdf.png" width="20" height="20"/>
+            Business use cases
+          </a>
+        </li>
+        <span>
+          
   
 
 
+  
+
+
+  
+
+
+  
+
+
+
+
+          
+        </span>
       </span>
-    </span>
-  
+    
 
   
 
 
+  
+
+
+
+
+          
+        </span>
       </span>
-    </span>
-  
+    
 
   
-    <span class="subfolders" style="display:none;">
-      
-        <div class="n-pdf-section">
-          <span class="n-pdf-section-title">
-            Sections
-          </span>
-        </div>
-      
-      <li>
-        <a target="_blank" href="/ontap-select/pdfs/sidebar/Plan.pdf" >
-          <img src="/ontap-select/images/pdf.png" width="20" height="20"/>
-          Plan
-        </a>
-      </li>
-      <span>
+
+
+  
+
+    
+      <span class="subfolders" style="display:none;">
         
-  
-
-  
-    <span class="subfolders" style="display:none;">
-      
-      <li>
-        <a target="_blank" href="/ontap-select/pdfs/sidebar/ONTAP_Select.pdf" >
-          <img src="/ontap-select/images/pdf.png" width="20" height="20"/>
-          ONTAP Select
-        </a>
-      </li>
-      <span>
+          <div class="n-pdf-section">
+            <span class="n-pdf-section-title">
+              
+                Sections
+              
+            </span>
+          </div>
         
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
+        <li>
+          <a target="_blank" href="/ontap-select/pdfs/sidebar/Plan.pdf" >
+            <img src="/ontap-select/images/pdf.png" width="20" height="20"/>
+            Plan
+          </a>
+        </li>
+        <span>
+          
   
 
 
+  
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/ontap-select/pdfs/sidebar/ONTAP_Select.pdf" >
+            <img src="/ontap-select/images/pdf.png" width="20" height="20"/>
+            ONTAP Select
+          </a>
+        </li>
+        <span>
+          
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+          
+        </span>
       </span>
-    </span>
-  
+    
 
   
-    <span class="subfolders" style="display:none;">
-      
-      <li>
-        <a target="_blank" href="/ontap-select/pdfs/sidebar/ONTAP_Select_Deploy.pdf" >
-          <img src="/ontap-select/images/pdf.png" width="20" height="20"/>
-          ONTAP Select Deploy
-        </a>
-      </li>
-      <span>
+
+
+  
+
+    
+      <span class="subfolders" style="display:none;">
         
+        <li>
+          <a target="_blank" href="/ontap-select/pdfs/sidebar/ONTAP_Select_Deploy.pdf" >
+            <img src="/ontap-select/images/pdf.png" width="20" height="20"/>
+            ONTAP Select Deploy
+          </a>
+        </li>
+        <span>
+          
   
 
+
   
 
 
+
+
+          
+        </span>
       </span>
-    </span>
-  
+    
 
   
 
 
+  
+
+
+
+
+          
+        </span>
       </span>
-    </span>
-  
+    
 
   
-    <span class="subfolders" style="display:none;">
-      
-        <div class="n-pdf-section">
-          <span class="n-pdf-section-title">
-            Sections
-          </span>
-        </div>
-      
-      <li>
-        <a target="_blank" href="/ontap-select/pdfs/sidebar/License.pdf" >
-          <img src="/ontap-select/images/pdf.png" width="20" height="20"/>
-          License
-        </a>
-      </li>
-      <span>
+
+
+  
+
+    
+      <span class="subfolders" style="display:none;">
         
-  
-    <span class="subfolders" style="display:none;">
-      
-      <li>
-        <a target="_blank" href="/ontap-select/pdfs/sidebar/Options.pdf" >
-          <img src="/ontap-select/images/pdf.png" width="20" height="20"/>
-          Options
-        </a>
-      </li>
-      <span>
+          <div class="n-pdf-section">
+            <span class="n-pdf-section-title">
+              
+                Sections
+              
+            </span>
+          </div>
         
+        <li>
+          <a target="_blank" href="/ontap-select/pdfs/sidebar/License.pdf" >
+            <img src="/ontap-select/images/pdf.png" width="20" height="20"/>
+            License
+          </a>
+        </li>
+        <span>
+          
   
 
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/ontap-select/pdfs/sidebar/Options.pdf" >
+            <img src="/ontap-select/images/pdf.png" width="20" height="20"/>
+            Options
+          </a>
+        </li>
+        <span>
+          
   
 
+
   
 
 
+  
+
+
+
+
+          
+        </span>
       </span>
-    </span>
-  
+    
 
   
-    <span class="subfolders" style="display:none;">
-      
-      <li>
-        <a target="_blank" href="/ontap-select/pdfs/sidebar/Capacity_pools_licensing_model.pdf" >
-          <img src="/ontap-select/images/pdf.png" width="20" height="20"/>
-          Capacity pools licensing model
-        </a>
-      </li>
-      <span>
+
+
+  
+
+    
+      <span class="subfolders" style="display:none;">
         
+        <li>
+          <a target="_blank" href="/ontap-select/pdfs/sidebar/Capacity_pools_licensing_model.pdf" >
+            <img src="/ontap-select/images/pdf.png" width="20" height="20"/>
+            Capacity pools licensing model
+          </a>
+        </li>
+        <span>
+          
   
 
-  
-
-  
-
-  
 
   
 
 
+  
+
+
+  
+
+
+  
+
+
+
+
+          
+        </span>
       </span>
-    </span>
-  
+    
 
   
-    <span class="subfolders" style="display:none;">
-      
-      <li>
-        <a target="_blank" href="/ontap-select/pdfs/sidebar/Purchase.pdf" >
-          <img src="/ontap-select/images/pdf.png" width="20" height="20"/>
-          Purchase
-        </a>
-      </li>
-      <span>
+
+
+  
+
+    
+      <span class="subfolders" style="display:none;">
         
+        <li>
+          <a target="_blank" href="/ontap-select/pdfs/sidebar/Purchase.pdf" >
+            <img src="/ontap-select/images/pdf.png" width="20" height="20"/>
+            Purchase
+          </a>
+        </li>
+        <span>
+          
   
 
-  
 
   
 
 
+  
+
+
+
+
+          
+        </span>
       </span>
-    </span>
-  
+    
 
   
 
 
+  
+
+
+
+
+          
+        </span>
       </span>
-    </span>
-  
+    
 
   
-    <span class="subfolders" style="display:none;">
-      
-        <div class="n-pdf-section">
-          <span class="n-pdf-section-title">
-            Sections
-          </span>
-        </div>
-      
-      <li>
-        <a target="_blank" href="/ontap-select/pdfs/sidebar/Install.pdf" >
-          <img src="/ontap-select/images/pdf.png" width="20" height="20"/>
-          Install
-        </a>
-      </li>
-      <span>
+
+
+  
+
+    
+      <span class="subfolders" style="display:none;">
         
-  
-    <span class="subfolders" style="display:none;">
-      
-      <li>
-        <a target="_blank" href="/ontap-select/pdfs/sidebar/Pre_installation_checklist.pdf" >
-          <img src="/ontap-select/images/pdf.png" width="20" height="20"/>
-          Pre-installation checklist
-        </a>
-      </li>
-      <span>
+          <div class="n-pdf-section">
+            <span class="n-pdf-section-title">
+              
+                Sections
+              
+            </span>
+          </div>
         
+        <li>
+          <a target="_blank" href="/ontap-select/pdfs/sidebar/Install.pdf" >
+            <img src="/ontap-select/images/pdf.png" width="20" height="20"/>
+            Install
+          </a>
+        </li>
+        <span>
+          
   
 
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/ontap-select/pdfs/sidebar/Pre_installation_checklist.pdf" >
+            <img src="/ontap-select/images/pdf.png" width="20" height="20"/>
+            Pre-installation checklist
+          </a>
+        </li>
+        <span>
+          
   
 
-  
 
   
 
 
+  
+
+
+  
+
+
+
+
+          
+        </span>
       </span>
-    </span>
-  
-
-  
-
-  
+    
 
   
 
 
+  
+
+
+  
+
+
+  
+
+
+
+
+          
+        </span>
       </span>
-    </span>
-  
+    
 
   
-    <span class="subfolders" style="display:none;">
-      
-        <div class="n-pdf-section">
-          <span class="n-pdf-section-title">
-            Sections
-          </span>
-        </div>
-      
-      <li>
-        <a target="_blank" href="/ontap-select/pdfs/sidebar/Administer.pdf" >
-          <img src="/ontap-select/images/pdf.png" width="20" height="20"/>
-          Administer
-        </a>
-      </li>
-      <span>
+
+
+  
+
+    
+      <span class="subfolders" style="display:none;">
         
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    <span class="subfolders" style="display:none;">
-      
-      <li>
-        <a target="_blank" href="/ontap-select/pdfs/sidebar/Nodes_and_hosts.pdf" >
-          <img src="/ontap-select/images/pdf.png" width="20" height="20"/>
-          Nodes and hosts
-        </a>
-      </li>
-      <span>
+          <div class="n-pdf-section">
+            <span class="n-pdf-section-title">
+              
+                Sections
+              
+            </span>
+          </div>
         
+        <li>
+          <a target="_blank" href="/ontap-select/pdfs/sidebar/Administer.pdf" >
+            <img src="/ontap-select/images/pdf.png" width="20" height="20"/>
+            Administer
+          </a>
+        </li>
+        <span>
+          
   
 
-  
 
   
 
+
   
 
 
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/ontap-select/pdfs/sidebar/Nodes_and_hosts.pdf" >
+            <img src="/ontap-select/images/pdf.png" width="20" height="20"/>
+            Nodes and hosts
+          </a>
+        </li>
+        <span>
+          
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+          
+        </span>
       </span>
-    </span>
-  
+    
 
   
 
 
+  
+
+
+
+
+          
+        </span>
       </span>
-    </span>
-  
+    
 
   
-    <span class="subfolders" style="display:none;">
-      
-        <div class="n-pdf-section">
-          <span class="n-pdf-section-title">
-            Sections
-          </span>
-        </div>
-      
-      <li>
-        <a target="_blank" href="/ontap-select/pdfs/sidebar/Deep_dive.pdf" >
-          <img src="/ontap-select/images/pdf.png" width="20" height="20"/>
-          Deep dive
-        </a>
-      </li>
-      <span>
+
+
+  
+
+    
+      <span class="subfolders" style="display:none;">
         
-  
-    <span class="subfolders" style="display:none;">
-      
-      <li>
-        <a target="_blank" href="/ontap-select/pdfs/sidebar/Storage.pdf" >
-          <img src="/ontap-select/images/pdf.png" width="20" height="20"/>
-          Storage
-        </a>
-      </li>
-      <span>
+          <div class="n-pdf-section">
+            <span class="n-pdf-section-title">
+              
+                Sections
+              
+            </span>
+          </div>
         
+        <li>
+          <a target="_blank" href="/ontap-select/pdfs/sidebar/Deep_dive.pdf" >
+            <img src="/ontap-select/images/pdf.png" width="20" height="20"/>
+            Deep dive
+          </a>
+        </li>
+        <span>
+          
   
 
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/ontap-select/pdfs/sidebar/Storage.pdf" >
+            <img src="/ontap-select/images/pdf.png" width="20" height="20"/>
+            Storage
+          </a>
+        </li>
+        <span>
+          
   
 
-  
-
-  
-
-  
 
   
 
 
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+          
+        </span>
       </span>
-    </span>
-  
+    
 
   
-    <span class="subfolders" style="display:none;">
-      
-      <li>
-        <a target="_blank" href="/ontap-select/pdfs/sidebar/Networking.pdf" >
-          <img src="/ontap-select/images/pdf.png" width="20" height="20"/>
-          Networking
-        </a>
-      </li>
-      <span>
+
+
+  
+
+    
+      <span class="subfolders" style="display:none;">
         
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
+        <li>
+          <a target="_blank" href="/ontap-select/pdfs/sidebar/Networking.pdf" >
+            <img src="/ontap-select/images/pdf.png" width="20" height="20"/>
+            Networking
+          </a>
+        </li>
+        <span>
+          
   
 
 
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+          
+        </span>
       </span>
-    </span>
-  
+    
 
   
-    <span class="subfolders" style="display:none;">
-      
-      <li>
-        <a target="_blank" href="/ontap-select/pdfs/sidebar/High_availability_architecture.pdf" >
-          <img src="/ontap-select/images/pdf.png" width="20" height="20"/>
-          High availability architecture
-        </a>
-      </li>
-      <span>
+
+
+  
+
+    
+      <span class="subfolders" style="display:none;">
         
+        <li>
+          <a target="_blank" href="/ontap-select/pdfs/sidebar/High_availability_architecture.pdf" >
+            <img src="/ontap-select/images/pdf.png" width="20" height="20"/>
+            High availability architecture
+          </a>
+        </li>
+        <span>
+          
   
 
-  
 
   
 
 
+  
+
+
+
+
+          
+        </span>
       </span>
-    </span>
-  
+    
 
   
-    <span class="subfolders" style="display:none;">
-      
-      <li>
-        <a target="_blank" href="/ontap-select/pdfs/sidebar/Performance.pdf" >
-          <img src="/ontap-select/images/pdf.png" width="20" height="20"/>
-          Performance
-        </a>
-      </li>
-      <span>
+
+
+  
+
+    
+      <span class="subfolders" style="display:none;">
         
+        <li>
+          <a target="_blank" href="/ontap-select/pdfs/sidebar/Performance.pdf" >
+            <img src="/ontap-select/images/pdf.png" width="20" height="20"/>
+            Performance
+          </a>
+        </li>
+        <span>
+          
   
 
-  
 
   
 
+
   
 
 
+  
+
+
+
+
+          
+        </span>
       </span>
-    </span>
+    
+
   
 
 
+
+
+          
+        </span>
       </span>
-    </span>
-  
+    
 
   
-    <span class="subfolders" style="display:none;">
-      
-        <div class="n-pdf-section">
-          <span class="n-pdf-section-title">
-            Sections
-          </span>
-        </div>
-      
-      <li>
-        <a target="_blank" href="/ontap-select/pdfs/sidebar/Integrate_with_vCenter.pdf" >
-          <img src="/ontap-select/images/pdf.png" width="20" height="20"/>
-          Integrate with vCenter
-        </a>
-      </li>
-      <span>
+
+
+  
+
+    
+      <span class="subfolders" style="display:none;">
         
-  
-    <span class="subfolders" style="display:none;">
-      
-      <li>
-        <a target="_blank" href="/ontap-select/pdfs/sidebar/Getting_started.pdf" >
-          <img src="/ontap-select/images/pdf.png" width="20" height="20"/>
-          Getting started
-        </a>
-      </li>
-      <span>
+          <div class="n-pdf-section">
+            <span class="n-pdf-section-title">
+              
+                Sections
+              
+            </span>
+          </div>
         
+        <li>
+          <a target="_blank" href="/ontap-select/pdfs/sidebar/Integrate_with_vCenter.pdf" >
+            <img src="/ontap-select/images/pdf.png" width="20" height="20"/>
+            Integrate with vCenter
+          </a>
+        </li>
+        <span>
+          
   
 
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/ontap-select/pdfs/sidebar/Getting_started.pdf" >
+            <img src="/ontap-select/images/pdf.png" width="20" height="20"/>
+            Getting started
+          </a>
+        </li>
+        <span>
+          
   
 
+
   
 
 
+  
+
+
+
+
+          
+        </span>
       </span>
-    </span>
-  
+    
 
   
-    <span class="subfolders" style="display:none;">
-      
-      <li>
-        <a target="_blank" href="/ontap-select/pdfs/sidebar/Manage_the_plug_in.pdf" >
-          <img src="/ontap-select/images/pdf.png" width="20" height="20"/>
-          Manage the plug-in
-        </a>
-      </li>
-      <span>
+
+
+  
+
+    
+      <span class="subfolders" style="display:none;">
         
+        <li>
+          <a target="_blank" href="/ontap-select/pdfs/sidebar/Manage_the_plug_in.pdf" >
+            <img src="/ontap-select/images/pdf.png" width="20" height="20"/>
+            Manage the plug-in
+          </a>
+        </li>
+        <span>
+          
   
 
-  
 
   
 
+
   
 
 
+  
+
+
+
+
+          
+        </span>
       </span>
-    </span>
-  
+    
 
   
 
-  
 
   
 
+
   
-    <span class="subfolders" style="display:none;">
-      
-      <li>
-        <a target="_blank" href="/ontap-select/pdfs/sidebar/Administer.pdf" >
-          <img src="/ontap-select/images/pdf.png" width="20" height="20"/>
-          Administer
-        </a>
-      </li>
-      <span>
+
+
+  
+
+
+  
+
+    
+      <span class="subfolders" style="display:none;">
         
+        <li>
+          <a target="_blank" href="/ontap-select/pdfs/sidebar/Administer.pdf" >
+            <img src="/ontap-select/images/pdf.png" width="20" height="20"/>
+            Administer
+          </a>
+        </li>
+        <span>
+          
   
 
-  
 
   
 
+
   
 
 
+  
+
+
+
+
+          
+        </span>
       </span>
-    </span>
-  
+    
 
   
 
 
+  
+
+
+
+
+          
+        </span>
       </span>
-    </span>
-  
+    
 
   
-    <span class="subfolders" style="display:none;">
-      
-        <div class="n-pdf-section">
-          <span class="n-pdf-section-title">
-            Sections
-          </span>
-        </div>
-      
-      <li>
-        <a target="_blank" href="/ontap-select/pdfs/sidebar/Automate_with_REST.pdf" >
-          <img src="/ontap-select/images/pdf.png" width="20" height="20"/>
-          Automate with REST
-        </a>
-      </li>
-      <span>
+
+
+  
+
+    
+      <span class="subfolders" style="display:none;">
         
-  
-    <span class="subfolders" style="display:none;">
-      
-      <li>
-        <a target="_blank" href="/ontap-select/pdfs/sidebar/Concepts.pdf" >
-          <img src="/ontap-select/images/pdf.png" width="20" height="20"/>
-          Concepts
-        </a>
-      </li>
-      <span>
+          <div class="n-pdf-section">
+            <span class="n-pdf-section-title">
+              
+                Sections
+              
+            </span>
+          </div>
         
+        <li>
+          <a target="_blank" href="/ontap-select/pdfs/sidebar/Automate_with_REST.pdf" >
+            <img src="/ontap-select/images/pdf.png" width="20" height="20"/>
+            Automate with REST
+          </a>
+        </li>
+        <span>
+          
   
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/ontap-select/pdfs/sidebar/Concepts.pdf" >
+            <img src="/ontap-select/images/pdf.png" width="20" height="20"/>
+            Concepts
+          </a>
+        </li>
+        <span>
+          
+  
+
 
   
 
-  
 
   
 
+
   
+
+
+  
+
 
   
     <div class="n-pdf-section">
-      <span class="n-pdf-section-title">
-        This topic
+  <span class="n-pdf-section-title">
+    This page
+  </span>
+</div>
+
+<li class="active">
+  <a target="_blank" href="/ontap-select/pdfs/pages/concept_api_async_proc.pdf" >
+    <img src="/ontap-select/images/pdf.png" width="20" height="20"/>
+    Asynchronous processing using the job object
+  </a>
+</li>
+
+
+  
+
+
+
+
+          
+        </span>
       </span>
-    </div>
-
-    <li class="active">
-      <a target="_blank" href="/ontap-select/pdfs/pages/concept_api_async_proc.pdf" >
-        <img src="/ontap-select/images/pdf.png" width="20" height="20"/>
-        Asynchronous processing using the job object
-      </a>
-    </li>
-  
-
-
-      </span>
-    </span>
-  
+    
 
   
-    <span class="subfolders" style="display:none;">
-      
-      <li>
-        <a target="_blank" href="/ontap-select/pdfs/sidebar/Access_with_a_browser.pdf" >
-          <img src="/ontap-select/images/pdf.png" width="20" height="20"/>
-          Access with a browser
-        </a>
-      </li>
-      <span>
+
+
+  
+
+    
+      <span class="subfolders" style="display:none;">
         
+        <li>
+          <a target="_blank" href="/ontap-select/pdfs/sidebar/Access_with_a_browser.pdf" >
+            <img src="/ontap-select/images/pdf.png" width="20" height="20"/>
+            Access with a browser
+          </a>
+        </li>
+        <span>
+          
   
 
-  
 
   
 
 
+  
+
+
+
+
+          
+        </span>
       </span>
-    </span>
-  
+    
 
   
-    <span class="subfolders" style="display:none;">
-      
-      <li>
-        <a target="_blank" href="/ontap-select/pdfs/sidebar/Workflow_processes.pdf" >
-          <img src="/ontap-select/images/pdf.png" width="20" height="20"/>
-          Workflow processes
-        </a>
-      </li>
-      <span>
+
+
+  
+
+    
+      <span class="subfolders" style="display:none;">
         
+        <li>
+          <a target="_blank" href="/ontap-select/pdfs/sidebar/Workflow_processes.pdf" >
+            <img src="/ontap-select/images/pdf.png" width="20" height="20"/>
+            Workflow processes
+          </a>
+        </li>
+        <span>
+          
   
 
+
   
 
 
+
+
+          
+        </span>
       </span>
-    </span>
-  
+    
 
   
-    <span class="subfolders" style="display:none;">
-      
-      <li>
-        <a target="_blank" href="/ontap-select/pdfs/sidebar/Access_with_Python.pdf" >
-          <img src="/ontap-select/images/pdf.png" width="20" height="20"/>
-          Access with Python
-        </a>
-      </li>
-      <span>
+
+
+  
+
+    
+      <span class="subfolders" style="display:none;">
         
+        <li>
+          <a target="_blank" href="/ontap-select/pdfs/sidebar/Access_with_Python.pdf" >
+            <img src="/ontap-select/images/pdf.png" width="20" height="20"/>
+            Access with Python
+          </a>
+        </li>
+        <span>
+          
   
 
+
   
 
 
+
+
+          
+        </span>
       </span>
-    </span>
-  
+    
 
   
-    <span class="subfolders" style="display:none;">
-      
-      <li>
-        <a target="_blank" href="/ontap-select/pdfs/sidebar/Python_code_samples.pdf" >
-          <img src="/ontap-select/images/pdf.png" width="20" height="20"/>
-          Python code samples
-        </a>
-      </li>
-      <span>
+
+
+  
+
+    
+      <span class="subfolders" style="display:none;">
         
+        <li>
+          <a target="_blank" href="/ontap-select/pdfs/sidebar/Python_code_samples.pdf" >
+            <img src="/ontap-select/images/pdf.png" width="20" height="20"/>
+            Python code samples
+          </a>
+        </li>
+        <span>
+          
   
 
-  
-
-  
-
-  
-
-  
 
   
 
 
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+          
+        </span>
       </span>
-    </span>
+    
+
   
 
 
+
+
+          
+        </span>
       </span>
-    </span>
-  
+    
 
   
 
+
   
-    <span class="subfolders" style="display:none;">
-      
-        <div class="n-pdf-section">
-          <span class="n-pdf-section-title">
-            Sections
-          </span>
-        </div>
-      
-      <li>
-        <a target="_blank" href="/ontap-select/pdfs/sidebar/Use_the_CLI.pdf" >
-          <img src="/ontap-select/images/pdf.png" width="20" height="20"/>
-          Use the CLI
-        </a>
-      </li>
-      <span>
+
+
+  
+
+    
+      <span class="subfolders" style="display:none;">
         
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    <span class="subfolders" style="display:none;">
-      
-      <li>
-        <a target="_blank" href="/ontap-select/pdfs/sidebar/Nodes_and_hosts.pdf" >
-          <img src="/ontap-select/images/pdf.png" width="20" height="20"/>
-          Nodes and hosts
-        </a>
-      </li>
-      <span>
+          <div class="n-pdf-section">
+            <span class="n-pdf-section-title">
+              
+                Sections
+              
+            </span>
+          </div>
         
+        <li>
+          <a target="_blank" href="/ontap-select/pdfs/sidebar/Use_the_CLI.pdf" >
+            <img src="/ontap-select/images/pdf.png" width="20" height="20"/>
+            Use the CLI
+          </a>
+        </li>
+        <span>
+          
   
 
 
-      </span>
-    </span>
   
 
+
   
-    <span class="subfolders" style="display:none;">
-      
-      <li>
-        <a target="_blank" href="/ontap-select/pdfs/sidebar/Deploy_utility.pdf" >
-          <img src="/ontap-select/images/pdf.png" width="20" height="20"/>
-          Deploy utility
-        </a>
-      </li>
-      <span>
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+    
+      <span class="subfolders" style="display:none;">
         
+        <li>
+          <a target="_blank" href="/ontap-select/pdfs/sidebar/Nodes_and_hosts.pdf" >
+            <img src="/ontap-select/images/pdf.png" width="20" height="20"/>
+            Nodes and hosts
+          </a>
+        </li>
+        <span>
+          
   
 
-  
-
-  
-
-  
-
-  
 
 
+
+          
+        </span>
       </span>
-    </span>
+    
+
   
 
 
+  
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/ontap-select/pdfs/sidebar/Deploy_utility.pdf" >
+            <img src="/ontap-select/images/pdf.png" width="20" height="20"/>
+            Deploy utility
+          </a>
+        </li>
+        <span>
+          
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+          
+        </span>
       </span>
-    </span>
-  
+    
 
   
 
-  
+
+
+
+          
+        </span>
+      </span>
+    
 
   
+
+
+  
+
+
+  
+
+
+  
+
 
   
 
@@ -1686,883 +2038,348 @@
   $("#toggleButtonPdf").click(function () {
     $("#toggleContainerPdf").toggle('display');
   });
-</script>
-
-
-
-<ul id="mysidebar" class="nav">
-  
-
-  
-    <li><a href="index.html">ONTAP Select 9.7 docs</a></li>
-  
-
-  
-    <!-- Check Container -->
-    <li class="subfolders">
-      <a href="#">Concepts</a>
-      <ul>
-        
-
-  
-    <li><a href="concept_ots_overview.html">Product overview</a></li>
-  
-
-  
-    <li><a href="concept_ots_deploy.html">ONTAP Select Deploy</a></li>
-  
-
-  
-    <!-- Check Container -->
-    <li class="subfolders">
-      <a href="#">Business use cases</a>
-      <ul>
-        
-
-  
-    <li><a href="concept_usecase_overview.html">Business needs and usage scenarios</a></li>
-  
-
-  
-    <li><a href="concept_usecase_robo.html">Remote and branch office</a></li>
-  
-
-  
-    <li><a href="concept_usecase_private_cloud.html">Private cloud and data center</a></li>
-  
-
-  
-    <li><a href="concept_usecase_mc_sds.html">MetroCluster SDS</a></li>
-  
-
-
-      </ul>
-    </li>
-  
-
-  
-    <li><a href="concept_terminology.html">Terminology</a></li>
-  
-
-
-      </ul>
-    </li>
-  
-
-  
-    <!-- Check Container -->
-    <li class="subfolders">
-      <a href="#">Plan</a>
-      <ul>
-        
-
-  
-    <li><a href="concept_workflow_deploy.html">Deployment workflow</a></li>
-  
-
-  
-    <!-- Check Container -->
-    <li class="subfolders">
-      <a href="#">ONTAP Select</a>
-      <ul>
-        
-
-  
-    <li><a href="reference_plan_ots_general.html">General requirements</a></li>
-  
-
-  
-    <li><a href="reference_plan_ots_hardware.html">Hypervisor and hardware</a></li>
-  
-
-  
-    <li><a href="reference_plan_ots_storage.html">Storage and RAID</a></li>
-  
-
-  
-    <li><a href="reference_plan_ots_vnas.html">ONTAP Select vNAS</a></li>
-  
-
-  
-    <li><a href="reference_plan_ots_networking.html">Networking</a></li>
-  
-
-  
-    <li><a href="reference_plan_ots_two_node.html">Two-node clusters</a></li>
-  
-
-  
-    <li><a href="reference_plan_ots_robo.html">Remote and branch offices</a></li>
-  
-
-  
-    <li><a href="reference_plan_ots_mcc_sds.html">MetroCluster SDS</a></li>
-  
-
-  
-    <li><a href="reference_plan_ots_vcenter.html">VMware vCenter</a></li>
-  
-
-  
-    <li><a href="reference_plan_ots_plugin.html">VMware vCenter plug-in</a></li>
-  
-
-
-      </ul>
-    </li>
-  
-
-  
-    <!-- Check Container -->
-    <li class="subfolders">
-      <a href="#">ONTAP Select Deploy</a>
-      <ul>
-        
-
-  
-    <li><a href="reference_plan_dep_general.html">General requirements</a></li>
-  
-
-  
-    <li><a href="reference_plan_dep_vmware.html">VMware environment</a></li>
-  
-
-
-      </ul>
-    </li>
-  
-
-  
-    <li><a href="reference_plan_best_practices.html">Best practices</a></li>
-  
-
-
-      </ul>
-    </li>
-  
-
-  
-    <!-- Check Container -->
-    <li class="subfolders">
-      <a href="#">License</a>
-      <ul>
-        
-
-  
-    <!-- Check Container -->
-    <li class="subfolders">
-      <a href="#">Options</a>
-      <ul>
-        
-
-  
-    <li><a href="concept_lic_evaluation.html">Evaluation licenses</a></li>
-  
-
-  
-    <li><a href="concept_lic_production.html">Production licenses</a></li>
-  
-
-  
-    <li><a href="concept_lic_platforms.html">Platform license offerings</a></li>
-  
-
-
-      </ul>
-    </li>
-  
-
-  
-    <!-- Check Container -->
-    <li class="subfolders">
-      <a href="#">Capacity pools licensing model</a>
-      <ul>
-        
-
-  
-    <li><a href="concept_lic_cp_operation.html">Operational details</a></li>
-  
-
-  
-    <li><a href="concept_lic_cp_serial_number.html">Node serial numbers</a></li>
-  
-
-  
-    <li><a href="concept_lic_cp_restrictions.html">Restrictions</a></li>
-  
-
-  
-    <li><a href="concept_lic_cp_compare_ct.html">Capacity pools versus capacity tiers</a></li>
-  
-
-  
-    <li><a href="concept_lic_cp_benefits.html">Summary of benefits</a></li>
-  
-
-
-      </ul>
-    </li>
-  
-
-  
-    <!-- Check Container -->
-    <li class="subfolders">
-      <a href="#">Purchase</a>
-      <ul>
-        
-
-  
-    <li><a href="concept_lic_workflow.html">Licensing workflow</a></li>
-  
-
-  
-    <li><a href="task_lic_acquire_ct.html">Capacity tiers</a></li>
-  
-
-  
-    <li><a href="task_lic_acquire_cp.html">Capacity pools</a></li>
-  
-
-
-      </ul>
-    </li>
-  
-
-  
-    <li><a href="reference_lic_ontap_features.html">ONTAP features</a></li>
-  
-
-
-      </ul>
-    </li>
-  
-
-  
-    <!-- Check Container -->
-    <li class="subfolders">
-      <a href="#">Install</a>
-      <ul>
-        
-
-  
-    <!-- Check Container -->
-    <li class="subfolders">
-      <a href="#">Pre-installation checklist</a>
-      <ul>
-        
-
-  
-    <li><a href="reference_chk_host_prep.html">Host preparation checklist</a></li>
-  
-
-  
-    <li><a href="reference_chk_deploy_req_info.html">Deploy utility required information</a></li>
-  
-
-  
-    <li><a href="reference_chk_select_req_info.html">ONTAP Select required information</a></li>
-  
-
-  
-    <li><a href="task_chk_nvme_configure.html">NVMe host configuration</a></li>
-  
-
-
-      </ul>
-    </li>
-  
-
-  
-    <li><a href="task_install_deploy.html">Install ONTAP Select Deploy</a></li>
-  
-
-  
-    <li><a href="task_deploy_cluster.html">Deploy a cluster</a></li>
-  
-
-  
-    <li><a href="reference_initial_state.html">Initial cluster state</a></li>
-  
-
-
-      </ul>
-    </li>
-  
-
-  
-    <!-- Check Container -->
-    <li class="subfolders">
-      <a href="#">Administer</a>
-      <ul>
-        
-
-  
-    <li><a href="concept_adm_before.html">Before you begin</a></li>
-  
-
-  
-    <li><a href="concept_adm_upgrading_nodes.html">Upgrade nodes</a></li>
-  
-
-  
-    <li><a href="task_adm_support.html">Diagnostics and support</a></li>
-  
-
-  
-    <li><a href="task_adm_security.html">Security</a></li>
-  
-
-  
-    <li><a href="task_adm_connectivity.html">Network connectivity</a></li>
-  
-
-  
-    <li><a href="task_adm_mediators.html">Mediators</a></li>
-  
-
-  
-    <li><a href="task_adm_clusters.html">Clusters</a></li>
-  
-
-  
-    <!-- Check Container -->
-    <li class="subfolders">
-      <a href="#">Nodes and hosts</a>
-      <ul>
-        
-
-  
-    <li><a href="task_adm_video_console.html">VM video console</a></li>
-  
-
-  
-    <li><a href="task_adm_resize.html">Resizing the cluster nodes</a></li>
-  
-
-  
-    <li><a href="task_adm_replace_drives_swraid.html">Replacing failed SW RAID drives</a></li>
-  
-
-  
-    <li><a href="task_adm_upgrade_vmfs6.html">Upgrading to VMFS6</a></li>
-  
-
-
-      </ul>
-    </li>
-  
-
-  
-    <li><a href="task_adm_licenses.html">Licenses</a></li>
-  
-
-
-      </ul>
-    </li>
-  
-
-  
-    <!-- Check Container -->
-    <li class="subfolders">
-      <a href="#">Deep dive</a>
-      <ul>
-        
-
-  
-    <!-- Check Container -->
-    <li class="subfolders">
-      <a href="#">Storage</a>
-      <ul>
-        
-
-  
-    <li><a href="concept_stor_concepts_chars.html">General concepts and characteristics</a></li>
-  
-
-  
-    <li><a href="concept_stor_hwraid_local.html">Hardware RAID services for local attached storage</a></li>
-  
-
-  
-    <li><a href="concept_stor_swraid_local.html">Software RAID services for local attached storage</a></li>
-  
-
-  
-    <li><a href="concept_stor_vsan_external.html">VSAN and external array configurations</a></li>
-  
-
-  
-    <li><a href="concept_stor_capacity_inc.html">Increasing storage capacity</a></li>
-  
-
-  
-    <li><a href="concept_stor_eff_support.html">Storage efficiency support</a></li>
-  
-
-
-      </ul>
-    </li>
-  
-
-  
-    <!-- Check Container -->
-    <li class="subfolders">
-      <a href="#">Networking</a>
-      <ul>
-        
-
-  
-    <li><a href="concept_nw_concepts_chars.html">General concepts and characteristics</a></li>
-  
-
-  
-    <li><a href="concept_nw_single_multi_node.html">Single and multi node configuration</a></li>
-  
-
-  
-    <li><a href="concept_nw_internal_external.html">Internal and external networks</a></li>
-  
-
-  
-    <li><a href="concept_nw_supported_configs.html">Supported configurations</a></li>
-  
-
-  
-    <li><a href="concept_nw_vsphere_vswitch_config.html">VMWare vSphere VSwitch configuration</a></li>
-  
-
-  
-    <li><a href="concept_nw_physical_switch_config.html">Physical switch configuration</a></li>
-  
-
-  
-    <li><a href="concept_nw_data_mgmt_separation.html">Data and management separation</a></li>
-  
-
-
-      </ul>
-    </li>
-  
-
-  
-    <!-- Check Container -->
-    <li class="subfolders">
-      <a href="#">High availability architecture</a>
-      <ul>
-        
-
-  
-    <li><a href="concept_ha_config.html">HA configuration</a></li>
-  
-
-  
-    <li><a href="concept_ha_mirroring.html">Synchronous replication and mirrored aggregates</a></li>
-  
-
-  
-    <li><a href="concept_ha_other.html">Other high availability functions</a></li>
-  
-
-
-      </ul>
-    </li>
-  
-
-  
-    <!-- Check Container -->
-    <li class="subfolders">
-      <a href="#">Performance</a>
-      <ul>
-        
-
-  
-    <li><a href="concept_perf_general.html">General considerations</a></li>
-  
-
-  
-    <li><a href="concept_perf_premium_ha_direct_ssd_94.html">9.4 Premium HA direct attached SSD storage</a></li>
-  
-
-  
-    <li><a href="concept_perf_premium_ha_direct_ssd_95.html">9.5 Premium HA direct attached SSD storage</a></li>
-  
-
-  
-    <li><a href="concept_perf_premium_ha_direct_ssd_96.html">9.6 Premium HA direct attached SSD storage</a></li>
-  
-
-
-      </ul>
-    </li>
-  
-
-
-      </ul>
-    </li>
-  
-
-  
-    <!-- Check Container -->
-    <li class="subfolders">
-      <a href="#">Integrate with vCenter</a>
-      <ul>
-        
-
-  
-    <!-- Check Container -->
-    <li class="subfolders">
-      <a href="#">Getting started</a>
-      <ul>
-        
-
-  
-    <li><a href="concept_vpi_overview.html">Overview</a></li>
-  
-
-  
-    <li><a href="concept_vpi_architecture.html">Architecture</a></li>
-  
-
-  
-    <li><a href="concept_vpi_planning.html">Planning</a></li>
-  
-
-
-      </ul>
-    </li>
-  
-
-  
-    <!-- Check Container -->
-    <li class="subfolders">
-      <a href="#">Manage the plug-in</a>
-      <ul>
-        
-
-  
-    <li><a href="concept_vpi_manage_before.html">Before you begin</a></li>
-  
-
-  
-    <li><a href="task_vpi_install.html">Install</a></li>
-  
-
-  
-    <li><a href="task_vpi_access.html">Access</a></li>
-  
-
-  
-    <li><a href="task_vpi_upgrade.html">Upgrade and remove</a></li>
-  
-
-
-      </ul>
-    </li>
-  
-
-  
-    <li><a href="task_vpi_manually_remove.html">Manually remove the plug-in</a></li>
-  
-
-  
-    <li><a href="task_vpi_deploy_cluster.html">Deploy a cluster</a></li>
-  
-
-  
-    <li><a href="concept_vpi_vcenter_integration.html">vCenter integration</a></li>
-  
-
-  
-    <!-- Check Container -->
-    <li class="subfolders">
-      <a href="#">Administer</a>
-      <ul>
-        
-
-  
-    <li><a href="task_vpi_adm_support.html">Diagnostics and support</a></li>
-  
-
-  
-    <li><a href="task_vpi_adm_network.html">Networking</a></li>
-  
-
-  
-    <li><a href="task_vpi_adm_clusters.html">Clusters</a></li>
-  
-
-  
-    <li><a href="task_vpi_adm_licenses.html">Licenses</a></li>
-  
-
-
-      </ul>
-    </li>
-  
-
-  
-    <li><a href="reference_vpi_troubleshooting.html">Troubleshoot</a></li>
-  
-
-
-      </ul>
-    </li>
-  
-
-  
-    <!-- Check Container -->
-    <li class="subfolders">
-      <a href="#">Automate with REST</a>
-      <ul>
-        
-
-  
-    <!-- Check Container -->
-    <li class="subfolders">
-      <a href="#">Concepts</a>
-      <ul>
-        
-
-  
-    <li><a href="concept_api_rest.html">REST web services</a></li>
-  
-
-  
-    <li><a href="concept_api_how_access.html">Access the Deploy API</a></li>
-  
-
-  
-    <li><a href="concept_api_versions.html">Deploy API versioning</a></li>
-  
-
-  
-    <li><a href="concept_api_operation.html">Basic operation</a></li>
-  
-
-  
-    <li><a href="concept_api_transaction.html">Request and response transaction</a></li>
-  
-
-  
-    <li class="active"><a href="concept_api_async_proc.html">Asynchronous processing</a></li>
-  
-
-
-      </ul>
-    </li>
-  
-
-  
-    <!-- Check Container -->
-    <li class="subfolders">
-      <a href="#">Access with a browser</a>
-      <ul>
-        
-
-  
-    <li><a href="concept_api_before_browser.html">Before you begin</a></li>
-  
-
-  
-    <li><a href="task_api_access_doc_page.html">Access the doc page</a></li>
-  
-
-  
-    <li><a href="task_api_understanding_call.html">Understanding an API call</a></li>
-  
-
-
-      </ul>
-    </li>
-  
-
-  
-    <!-- Check Container -->
-    <li class="subfolders">
-      <a href="#">Workflow processes</a>
-      <ul>
-        
-
-  
-    <li><a href="concept_api_before_workflows.html">Before you begin</a></li>
-  
-
-  
-    <li><a href="reference_api_workflow01.html">Workflow 1 Creating a cluster</a></li>
-  
-
-
-      </ul>
-    </li>
-  
-
-  
-    <!-- Check Container -->
-    <li class="subfolders">
-      <a href="#">Access with Python</a>
-      <ul>
-        
-
-  
-    <li><a href="concept_api_before_python.html">Before you begin</a></li>
-  
-
-  
-    <li><a href="concept_api_understanding_scripts.html">Understanding the scripts</a></li>
-  
-
-
-      </ul>
-    </li>
-  
-
-  
-    <!-- Check Container -->
-    <li class="subfolders">
-      <a href="#">Python code samples</a>
-      <ul>
-        
-
-  
-    <li><a href="reference_api_script_cc.html">Create a cluster</a></li>
-  
-
-  
-    <li><a href="reference_api_json_cc.html">JSON to create a cluster</a></li>
-  
-
-  
-    <li><a href="reference_api_script_anl.html">Add a node license</a></li>
-  
-
-  
-    <li><a href="reference_api_script_dc.html">Delete a cluster</a></li>
-  
-
-  
-    <li><a href="reference_api_script_common.html">Common support module</a></li>
-  
-
-  
-    <li><a href="reference_api_script_resize.html">Resize cluster nodes</a></li>
-  
-
-
-      </ul>
-    </li>
-  
-
-
-      </ul>
-    </li>
-  
-
-  
-    <li><a href="concept_automate_ansible.html">Automate with Ansible</a></li>
-  
-
-  
-    <!-- Check Container -->
-    <li class="subfolders">
-      <a href="#">Use the CLI</a>
-      <ul>
-        
-
-  
-    <li><a href="concept_cli_before.html">Before you begin</a></li>
-  
-
-  
-    <li><a href="task_cli_signing_in.html">Sign in using SSH</a></li>
-  
-
-  
-    <li><a href="task_cli_deploy_cluster.html">Deploy a cluster</a></li>
-  
-
-  
-    <li><a href="task_cli_security.html">Security</a></li>
-  
-
-  
-    <li><a href="task_cli_connectivity.html">Network connectivity</a></li>
-  
-
-  
-    <li><a href="task_cli_clusters.html">Clusters</a></li>
-  
-
-  
-    <!-- Check Container -->
-    <li class="subfolders">
-      <a href="#">Nodes and hosts</a>
-      <ul>
-        
-
-  
-    <li><a href="task_cli_upgrade_esxi65.html">Upgrading ESXi to 6.5 and higher</a></li>
-  
-
-
-      </ul>
-    </li>
-  
-
-  
-    <!-- Check Container -->
-    <li class="subfolders">
-      <a href="#">Deploy utility</a>
-      <ul>
-        
-
-  
-    <li><a href="task_cli_upgrade_deploy.html">Upgrade a Deploy instance</a></li>
-  
-
-  
-    <li><a href="task_cli_migrate_deploy.html">Migrate a Deploy instance</a></li>
-  
-
-  
-    <li><a href="task_cli_deploy_image_add.html">Add ONTAP Select images</a></li>
-  
-
-  
-    <li><a href="task_cli_deploy_image_remove.html">Remove ONTAP Select images</a></li>
-  
-
-  
-    <li><a href="task_cli_deploy_recover_two_node.html">Recover Deploy for a two-node cluster</a></li>
-  
-
-
-      </ul>
-    </li>
-  
-
-
-      </ul>
-    </li>
-  
-
-  
-    <li><a href="reference_faq.html">FAQ</a></li>
-  
-
-  
-    <li><a href="reference_additional_info.html">Get more information</a></li>
-  
-
-  
-    <li><a href="reference_earlier_versions.html">Earlier versions</a></li>
-  
-
-  
-    <li><a href="reference_legal_notices.html">Legal notices</a></li>
-  
-
-
-</ul>
+</script><ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="index.html">
+        ONTAP Select 9.7 docs
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Concepts</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="concept_ots_overview.html">
+        Product overview
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_ots_deploy.html">
+        ONTAP Select Deploy
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Business use cases</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="concept_usecase_overview.html">
+        Business needs and usage scenarios
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_usecase_robo.html">
+        Remote and branch office
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_usecase_private_cloud.html">
+        Private cloud and data center
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_usecase_mc_sds.html">
+        MetroCluster SDS
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="concept_terminology.html">
+        Terminology
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Plan</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="concept_workflow_deploy.html">
+        Deployment workflow
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> ONTAP Select</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="reference_plan_ots_general.html">
+        General requirements
+      </a></li><li class=" "><a class="na-navbar-padding" href="reference_plan_ots_hardware.html">
+        Hypervisor and hardware
+      </a></li><li class=" "><a class="na-navbar-padding" href="reference_plan_ots_storage.html">
+        Storage and RAID
+      </a></li><li class=" "><a class="na-navbar-padding" href="reference_plan_ots_vnas.html">
+        ONTAP Select vNAS
+      </a></li><li class=" "><a class="na-navbar-padding" href="reference_plan_ots_networking.html">
+        Networking
+      </a></li><li class=" "><a class="na-navbar-padding" href="reference_plan_ots_two_node.html">
+        Two-node clusters
+      </a></li><li class=" "><a class="na-navbar-padding" href="reference_plan_ots_robo.html">
+        Remote and branch offices
+      </a></li><li class=" "><a class="na-navbar-padding" href="reference_plan_ots_mcc_sds.html">
+        MetroCluster SDS
+      </a></li><li class=" "><a class="na-navbar-padding" href="reference_plan_ots_vcenter.html">
+        VMware vCenter
+      </a></li><li class=" "><a class="na-navbar-padding" href="reference_plan_ots_plugin.html">
+        VMware vCenter plug-in
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> ONTAP Select Deploy</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="reference_plan_dep_general.html">
+        General requirements
+      </a></li><li class=" "><a class="na-navbar-padding" href="reference_plan_dep_vmware.html">
+        VMware environment
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="reference_plan_best_practices.html">
+        Best practices
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> License</div>
+      </a>
+      <ul><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Options</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="concept_lic_evaluation.html">
+        Evaluation licenses
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_lic_production.html">
+        Production licenses
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_lic_platforms.html">
+        Platform license offerings
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Capacity pools licensing model</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="concept_lic_cp_operation.html">
+        Operational details
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_lic_cp_serial_number.html">
+        Node serial numbers
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_lic_cp_restrictions.html">
+        Restrictions
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_lic_cp_compare_ct.html">
+        Capacity pools versus capacity tiers
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_lic_cp_benefits.html">
+        Summary of benefits
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Purchase</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="concept_lic_workflow.html">
+        Licensing workflow
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_lic_acquire_ct.html">
+        Capacity tiers
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_lic_acquire_cp.html">
+        Capacity pools
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="reference_lic_ontap_features.html">
+        ONTAP features
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Install</div>
+      </a>
+      <ul><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Pre-installation checklist</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="reference_chk_host_prep.html">
+        Host preparation checklist
+      </a></li><li class=" "><a class="na-navbar-padding" href="reference_chk_deploy_req_info.html">
+        Deploy utility required information
+      </a></li><li class=" "><a class="na-navbar-padding" href="reference_chk_select_req_info.html">
+        ONTAP Select required information
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_chk_nvme_configure.html">
+        NVMe host configuration
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="task_install_deploy.html">
+        Install ONTAP Select Deploy
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_deploy_cluster.html">
+        Deploy a cluster
+      </a></li><li class=" "><a class="na-navbar-padding" href="reference_initial_state.html">
+        Initial cluster state
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Administer</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="concept_adm_before.html">
+        Before you begin
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_adm_upgrading_nodes.html">
+        Upgrade nodes
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_adm_support.html">
+        Diagnostics and support
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_adm_security.html">
+        Security
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_adm_connectivity.html">
+        Network connectivity
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_adm_mediators.html">
+        Mediators
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_adm_clusters.html">
+        Clusters
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Nodes and hosts</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="task_adm_video_console.html">
+        VM video console
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_adm_resize.html">
+        Resizing the cluster nodes
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_adm_replace_drives_swraid.html">
+        Replacing failed SW RAID drives
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_adm_upgrade_vmfs6.html">
+        Upgrading to VMFS6
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="task_adm_licenses.html">
+        Licenses
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Deep dive</div>
+      </a>
+      <ul><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Storage</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="concept_stor_concepts_chars.html">
+        General concepts and characteristics
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_stor_hwraid_local.html">
+        Hardware RAID services for local attached storage
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_stor_swraid_local.html">
+        Software RAID services for local attached storage
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_stor_vsan_external.html">
+        VSAN and external array configurations
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_stor_capacity_inc.html">
+        Increasing storage capacity
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_stor_eff_support.html">
+        Storage efficiency support
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Networking</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="concept_nw_concepts_chars.html">
+        General concepts and characteristics
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_nw_single_multi_node.html">
+        Single and multi node configuration
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_nw_internal_external.html">
+        Internal and external networks
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_nw_supported_configs.html">
+        Supported configurations
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_nw_vsphere_vswitch_config.html">
+        VMWare vSphere VSwitch configuration
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_nw_physical_switch_config.html">
+        Physical switch configuration
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_nw_data_mgmt_separation.html">
+        Data and management separation
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> High availability architecture</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="concept_ha_config.html">
+        HA configuration
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_ha_mirroring.html">
+        Synchronous replication and mirrored aggregates
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_ha_other.html">
+        Other high availability functions
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Performance</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="concept_perf_general.html">
+        General considerations
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_perf_premium_ha_direct_ssd_94.html">
+        9.4 Premium HA direct attached SSD storage
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_perf_premium_ha_direct_ssd_95.html">
+        9.5 Premium HA direct attached SSD storage
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_perf_premium_ha_direct_ssd_96.html">
+        9.6 Premium HA direct attached SSD storage
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Integrate with vCenter</div>
+      </a>
+      <ul><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Getting started</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="concept_vpi_overview.html">
+        Overview
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_vpi_architecture.html">
+        Architecture
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_vpi_planning.html">
+        Planning
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Manage the plug-in</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="concept_vpi_manage_before.html">
+        Before you begin
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_vpi_install.html">
+        Install
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_vpi_access.html">
+        Access
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_vpi_upgrade.html">
+        Upgrade and remove
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="task_vpi_manually_remove.html">
+        Manually remove the plug-in
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_vpi_deploy_cluster.html">
+        Deploy a cluster
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_vpi_vcenter_integration.html">
+        vCenter integration
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Administer</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="task_vpi_adm_support.html">
+        Diagnostics and support
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_vpi_adm_network.html">
+        Networking
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_vpi_adm_clusters.html">
+        Clusters
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_vpi_adm_licenses.html">
+        Licenses
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="reference_vpi_troubleshooting.html">
+        Troubleshoot
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Automate with REST</div>
+      </a>
+      <ul><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Concepts</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="concept_api_rest.html">
+        REST web services
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_api_how_access.html">
+        Access the Deploy API
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_api_versions.html">
+        Deploy API versioning
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_api_operation.html">
+        Basic operation
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_api_transaction.html">
+        Request and response transaction
+      </a></li><li class="  active "><a class="na-navbar-padding" href="concept_api_async_proc.html">
+        Asynchronous processing
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Access with a browser</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="concept_api_before_browser.html">
+        Before you begin
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_api_access_doc_page.html">
+        Access the doc page
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_api_understanding_call.html">
+        Understanding an API call
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Workflow processes</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="concept_api_before_workflows.html">
+        Before you begin
+      </a></li><li class=" "><a class="na-navbar-padding" href="reference_api_workflow01.html">
+        Workflow 1 Creating a cluster
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Access with Python</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="concept_api_before_python.html">
+        Before you begin
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_api_understanding_scripts.html">
+        Understanding the scripts
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Python code samples</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="reference_api_script_cc.html">
+        Create a cluster
+      </a></li><li class=" "><a class="na-navbar-padding" href="reference_api_json_cc.html">
+        JSON to create a cluster
+      </a></li><li class=" "><a class="na-navbar-padding" href="reference_api_script_anl.html">
+        Add a node license
+      </a></li><li class=" "><a class="na-navbar-padding" href="reference_api_script_dc.html">
+        Delete a cluster
+      </a></li><li class=" "><a class="na-navbar-padding" href="reference_api_script_common.html">
+        Common support module
+      </a></li><li class=" "><a class="na-navbar-padding" href="reference_api_script_resize.html">
+        Resize cluster nodes
+      </a></li></ul></li></ul></li><li class=" "><a class="na-navbar-padding" href="concept_automate_ansible.html">
+        Automate with Ansible
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Use the CLI</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="concept_cli_before.html">
+        Before you begin
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_cli_signing_in.html">
+        Sign in using SSH
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_cli_deploy_cluster.html">
+        Deploy a cluster
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_cli_security.html">
+        Security
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_cli_connectivity.html">
+        Network connectivity
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_cli_clusters.html">
+        Clusters
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Nodes and hosts</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="task_cli_upgrade_esxi65.html">
+        Upgrading ESXi to 6.5 and higher
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Deploy utility</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="task_cli_upgrade_deploy.html">
+        Upgrade a Deploy instance
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_cli_migrate_deploy.html">
+        Migrate a Deploy instance
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_cli_deploy_image_add.html">
+        Add ONTAP Select images
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_cli_deploy_image_remove.html">
+        Remove ONTAP Select images
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_cli_deploy_recover_two_node.html">
+        Recover Deploy for a two-node cluster
+      </a></li></ul></li></ul></li><li class=" "><a class="na-navbar-padding" href="reference_faq.html">
+        FAQ
+      </a></li><li class=" "><a class="na-navbar-padding" href="reference_additional_info.html">
+        Get more information
+      </a></li><li class=" "><a class="na-navbar-padding" href="reference_earlier_versions.html">
+        Earlier versions
+      </a></li><li class=" "><a class="na-navbar-padding" href="reference_legal_notices.html">
+        Legal notices
+      </a></li></ul>
 
 <!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
 <script>$("li.active").parents('li').toggleClass("active");</script>
@@ -2582,9 +2399,11 @@
 </div>
 
 <p class="page-details">
-
-<time datetime="2019-11-21 15:53:38 +0000">11/21/2019</time>
-
+  
+    
+    <time datetime="2019-11-21 15:53:38 +0000">11/21/2019</time>
+    
+  
 
 <span>Contributors
   
@@ -2601,7 +2420,7 @@
 
   <span>
     <a target="_blank" href="/ontap-select/pdfs/pages/concept_api_async_proc.pdf" role="button">
-      <img src="/ontap-select/images/pdf.png" width="20" height="20"/> Download PDF of this topic
+      <img src="/ontap-select/images/pdf.png" width="20" height="20"/> Download PDF of this page
     </a>
   </span>
 
