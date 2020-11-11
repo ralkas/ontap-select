@@ -247,7 +247,7 @@
       
       <div class="search-property-bar">
         <div id="search-demo-container" class="searchbox n-property-bar__search">
-          <div id="react-search"></div>
+          <div id="react-search" data-type="widget" data-placeholder="Search Documentation" data-no-results-found="Search for {suggestion}." data-did-you-mean="No results were found for {query}" data-no-results-found-did-you-mean="No results found for {query}. Did you mean {suggestion}?" data-results-found="{hitCount} results found"  ></div>
           <button class="n-property-bar__search-toggle-button" type="button">
             <svg class="n-icon-search n-property-bar__search-toggle-button-icon" aria-labelledby="title">
               <title>search</title>
@@ -379,16 +379,12 @@
   
   <div class="col-md-3" >
       <div class="n-pdf-header">
-  <a id="toggleButtonPdf" class="n-pdf-button" type="button">
-    PDFs
-    <span>
+  <a id="toggleButtonPdf" class="n-pdf-button" type="button">PDFs<span>
     </span>
   </a>
 </div>
 <ul id="toggleContainerPdf" class="n-pdf-body" style="display:none;"><div class="n-pdf-section">
-      <span class="n-pdf-section-title">
-        Site
-      </span>
+      <span class="n-pdf-section-title">Site</span>
     </div>
     <li>
       <a target="_blank" href="/ontap-select/us-en/pdfs/fullsite-sidebar/ONTAP_Select_documentation.pdf" >
@@ -406,9 +402,7 @@
         
           <div class="n-pdf-section">
             <span class="n-pdf-section-title">
-              
-                Sections
-              
+              Sections
             </span>
           </div>
         
@@ -481,9 +475,7 @@
         
           <div class="n-pdf-section">
             <span class="n-pdf-section-title">
-              
-                Sections
-              
+              Sections
             </span>
           </div>
         
@@ -600,9 +592,7 @@
         
           <div class="n-pdf-section">
             <span class="n-pdf-section-title">
-              
-                Sections
-              
+              Sections
             </span>
           </div>
         
@@ -736,9 +726,7 @@
         
           <div class="n-pdf-section">
             <span class="n-pdf-section-title">
-              
-                Sections
-              
+              Sections
             </span>
           </div>
         
@@ -811,9 +799,7 @@
         
           <div class="n-pdf-section">
             <span class="n-pdf-section-title">
-              
-                Sections
-              
+              Sections
             </span>
           </div>
         
@@ -901,9 +887,7 @@
         
           <div class="n-pdf-section">
             <span class="n-pdf-section-title">
-              
-                Sections
-              
+              Sections
             </span>
           </div>
         
@@ -1021,9 +1005,7 @@
 
   
     <div class="n-pdf-section">
-  <span class="n-pdf-section-title">
-    This page
-  </span>
+  <span class="n-pdf-section-title">This page</span>
 </div>
 
 <li class="active">
@@ -1099,9 +1081,7 @@
         
           <div class="n-pdf-section">
             <span class="n-pdf-section-title">
-              
-                Sections
-              
+              Sections
             </span>
           </div>
         
@@ -1244,9 +1224,7 @@
         
           <div class="n-pdf-section">
             <span class="n-pdf-section-title">
-              
-                Sections
-              
+              Sections
             </span>
           </div>
         
@@ -1450,9 +1428,7 @@
         
           <div class="n-pdf-section">
             <span class="n-pdf-section-title">
-              
-                Sections
-              
+              Sections
             </span>
           </div>
         
@@ -1944,14 +1920,20 @@
   
 
 <span>Contributors
+  <a target="_blank" href="https://github.com/netapp-barbe">
+    <img  class="avatar avatar-small"
+          alt="netapp-barbe"
+          width="20" height="20"
+          src="https://avatars1.githubusercontent.com/u/55463742?v=4"
+          style="border-radius: 50%;"/>
+  </a>
   
 </span>
 
 
   <span>
     <a target="_blank" href="/ontap-select/us-en/pdfs/pages/concept_ha_other.pdf" role="button">
-      <img src="/ontap-select/us-en/images/pdf.png" width="20" height="20"/> Download PDF of this page
-    </a>
+      <img src="/ontap-select/us-en/images/pdf.png" width="20" height="20"/>Download PDF of this page</a>
   </span>
 
 
@@ -2073,8 +2055,8 @@ Network heartbeats are sent over the HA interconnect to the HA partner, node D, 
   <div class="page-nav-toolbar">
     <div class="page-nav-contribute"  >
       <div class="page-nav-contribute-title">CONTRIBUTE</div>
-      <a target="_blank" href="https://github.com/NetAppDocs/ontap-select/blob/master/concept_ha_other.adoc" class="btn btn-default githubEditButton" role="button"><img src="/ontap-select/us-en/images/github.png" class="github-icon" /> Edit on GitHub</a>
-      <a target="_blank" href="https://github.com/NetAppDocs/ontap-select/issues/new?body=Page%3A%20[HA additional details](https://docs.netapp.com/us-en/ontap-select/concept_ha_other.html)" class="btn btn-default githubEditButton" role="button"><img src="/ontap-select/us-en/images/github.png" class="github-icon" /> Request doc changes</a>
+      <a target="_blank" href="https://github.com/NetAppDocs/ontap-select/blob/master/concept_ha_other.adoc" class="btn btn-default githubEditButton" role="button"><img src="/ontap-select/us-en/images/github.png" class="github-icon" />Edit on GitHub</a>
+      <a target="_blank" href="https://github.com/NetAppDocs/ontap-select/issues/new?body=Page%3A%20[HA additional details](https://docs.netapp.com/us-en/ontap-select/concept_ha_other.html)" class="btn btn-default githubEditButton" role="button"><img src="/ontap-select/us-en/images/github.png" class="github-icon" />Request doc changes</a>
       <a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  >Contributor's Guide</a>
     </div>
     <div class="page-nav-container">
@@ -2192,12 +2174,7 @@ Network heartbeats are sent over the HA interconnect to the HA partner, node D, 
 
 </div>
 <div class="n-footer__bottom-right">
-  <p class="n-footer__fine-print">
-
-
-  Have feedback for our website?
-
-  <a target="_self" href="javascript:netapp_mailto()" class="n-footer__copyright">Let us know</a>
+  <p class="n-footer__fine-print">Have feedback for our website?<a target="_self" href="javascript:netapp_mailto()" class="n-footer__copyright">Let us know</a>
   <a href="https://docs.netapp.com/us-en/announcements/" class="n-footer__copyright">Announcements</a>
   </p>
 </div>
