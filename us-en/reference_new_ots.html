@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head class="at-element-marker">
-  <title>What&#8217;s new in ONTAP Select 9.7</title>
+  <title>What&#8217;s new in ONTAP Select 9.8</title>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
   <meta http-equiv="language" content="en">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:title" content="What&#8217;s new in ONTAP Select 9.7" />
+  <meta property="og:title" content="What&#8217;s new in ONTAP Select 9.8" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://docs.netapp.com/ontap-select/us-en/reference_new_ots.html" />
 	<meta property="og:description" content="There are several new and changed features provided with the current release of ONTAP Select." />
@@ -358,7 +358,7 @@
           <a href="/ontap-select/us-en/">ONTAP&nbsp;Select</a>
         </li>
         <li class="n-breadcrumb__list-item">
-          What&#8217;s new in ONTAP Select 9.7
+          What&#8217;s new in ONTAP Select 9.8
         </li>
       </ul>
     </div>
@@ -1559,7 +1559,7 @@
     $("#toggleContainerPdf").toggle('display');
   });
 </script><ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="index.html">
-        ONTAP Select 9.7 docs
+        ONTAP Select 9.8 docs
       </a></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> Concepts</div>
       </a>
@@ -1915,13 +1915,13 @@
 
 
 <div class="n-doc__component-detail-heading-wrap">
-  <h1 class="n-doc__component-detail-heading">What&#8217;s new in ONTAP Select 9.7</h1>
+  <h1 class="n-doc__component-detail-heading">What&#8217;s new in ONTAP Select 9.8</h1>
 </div>
 
 <p class="page-details">
   
     
-    <time datetime="2020-01-23 22:30:09 +0000">01/23/2020</time>
+    <time datetime="2020-11-04 21:38:21 +0000">11/04/2020</time>
     
   
 
@@ -1952,69 +1952,31 @@
 <div class="paragraph lead">
 <p>There are several new and changed features provided with the current release of ONTAP Select.</p>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Software RAID using NVMe drives is only available on VMware ESXi. See the <a href="https://library.netapp.com/ecm/ecm_download_file/ECMLP2861046" target="_blank" rel="noopener">Release Notes</a> for more information.
-</td>
-</tr>
-</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="high-speed-interface-option">High speed interface option</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong class="big blue">VMware ESXi only.</strong> The high speed interface feature enhances network connectivity by providing an option for both 25G (25GbE) and 40G (40GbE). To achieve the best performance when using these higher speeds, you should follow the best practices regarding port mapping configurations as described in the ONTAP Select documentation.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="software-raid-using-nvme-drives">Software RAID using NVMe drives</h2>
+<h2 id="updated-vmware-esxi-support">Updated VMware ESXi support</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><strong class="big blue">VMware ESXi only.</strong> Non-volatile memory express (NVMe) is an architecture for implementing solid-state drives (SSD) based on an enhanced interface and storage protocol. It accelerates the transfer of data between the host and SSD drives. With ONTAP Select 9.7, you can configure software RAID using the faster NVMe drives on ESXi.</p>
+<p><strong class="big blue">VMware ESXi and KVM.</strong> There are two changes for ONTAP Select 9.8 regarding the support for VMware ESXi:</p>
 </div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-To use software RAID with an NVMe disk, you must first manually update the host&#8217;s BIOS and reboot the machine. See <a href="task_chk_nvme_configure.html">Configuring a host to use NVMe drives</a> for more information.
-</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="versioning-change-for-ontap-select-deploy">Versioning change for ONTAP Select Deploy</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p><strong class="big blue">VMware ESXi and KVM.</strong> The ONTAP Select Deploy administration utility is no longer assigned a separate version number. Rather, Deploy is considered to be a part of the ONTAP Select version it is associated with. Each Deploy update within a specific ONTAP Select release is assigned a unique build number.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="improvements-to-deploy-web-user-interface">Improvements to Deploy web user interface</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p><strong class="big blue">VMware ESXi and KVM.</strong> The Deploy utility web user interface has been enhanced based on evolving industry standard best practices. Several of the existing administrative workflows have been updated and simplified.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="premium-xl-license-offering">Premium XL license offering</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p><strong class="big blue">VMware ESXi only.</strong> When using the premium XL license offering and large instance type with ONTAP Select 9.7, you are no longer restricted to only software RAID. With this configuration, you can use either software or hardware RAID.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="enhanced-intel-support">Enhanced Intel support</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p><strong class="big blue">VMware ESXi and KVM.</strong> ONTAP Select now supports the Intel Cascade Lake processor, which is the successor to Skylake. Support is provided with ONTAP Select 9.7 and previous releases that support Skylake. With this change, support is considered to be provided for the Intel Xeon processors for server. See the <em>NetApp Interoperability Matrix Tool</em> for more information.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>ESXi 7.0 is supported (GA build 15843807 and later)</p>
+</li>
+<li>
+<p>ESXi 6.0 is no longer supported</p>
+</li>
+</ul>
 </div>
 </div>
 </div>
@@ -2029,7 +1991,7 @@ To use software RAID with an NVMe disk, you must first manually update the host&
     <div class="page-nav-contribute"  >
       <div class="page-nav-contribute-title">CONTRIBUTE</div>
       <a target="_blank" href="https://github.com/NetAppDocs/ontap-select/blob/master/reference_new_ots.adoc" class="btn btn-default githubEditButton" role="button"><img src="/ontap-select/us-en/images/github.png" class="github-icon" /> Edit on GitHub</a>
-      <a target="_blank" href="https://github.com/NetAppDocs/ontap-select/issues/new?body=Page%3A%20[What&#8217;s new in ONTAP Select 9.7](https://docs.netapp.com/us-en/ontap-select/reference_new_ots.html)" class="btn btn-default githubEditButton" role="button"><img src="/ontap-select/us-en/images/github.png" class="github-icon" /> Request doc changes</a>
+      <a target="_blank" href="https://github.com/NetAppDocs/ontap-select/issues/new?body=Page%3A%20[What&#8217;s new in ONTAP Select 9.8](https://docs.netapp.com/us-en/ontap-select/reference_new_ots.html)" class="btn btn-default githubEditButton" role="button"><img src="/ontap-select/us-en/images/github.png" class="github-icon" /> Request doc changes</a>
       <a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  >Contributor's Guide</a>
     </div>
     <div class="page-nav-container">

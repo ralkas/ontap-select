@@ -1574,7 +1574,7 @@
     $("#toggleContainerPdf").toggle('display');
   });
 </script><ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="index.html">
-        ONTAP Select 9.7 docs
+        ONTAP Select 9.8 docs
       </a></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> Concepts</div>
       </a>
@@ -1936,11 +1936,19 @@
 <p class="page-details">
   
     
-    <time datetime="2019-11-19 16:34:19 +0000">11/19/2019</time>
+    <time datetime="2020-11-06 16:19:12 +0000">11/06/2020</time>
     
   
 
 <span>Contributors
+  
+  <a target="_blank" href="https://github.com/dmp-netapp">
+    <img  class="avatar avatar-small"
+          alt="dmp-netapp"
+          width="20" height="20"
+          src="https://avatars2.githubusercontent.com/u/50704017?v=4"
+          style="border-radius: 50%;"/>
+  </a>
   
   <a target="_blank" href="https://github.com/netapp-barbe">
     <img  class="avatar avatar-small"
@@ -1962,68 +1970,14 @@
 
 </p>
 
-<div id="preamble">
-<div class="sectionbody">
 <div class="paragraph lead">
 <p>Select the best hardware and configure your network to optimize performance and resiliency.</p>
 </div>
 <div class="paragraph">
-<p>Server vendors understand that customers have different needs and choice is critical. As a result, when purchasing a physical server, there are numerous options available when making network connectivity decisions. Most commodity systems ship with various NIC choices that provide single-port and multiport options with varying permutations of 1Gb and 10Gb ports. Care should be taken when selecting server NICs because the choices provided by server vendors can have a significant impact on the overall performance of the ONTAP Select cluster.</p>
+<p>Server vendors understand that customers have different needs and choice is critical. As a result, when purchasing a physical server, there are numerous options available when making network connectivity decisions. Most commodity systems ship with various NIC choices that provide single-port and multiport options with varying permutations of speed and throughput. Starting with ONTAP Select 9.8, 25Gb/s and 40Gb/s NIC adapters are supported with VMWare ESX.</p>
 </div>
 <div class="paragraph">
-<p>Link aggregation is a common network construct used to aggregate bandwidth across multiple physical adapters. LACP is a vendor-neutral standard that provides an open protocol for network endpoints that bundle groupings of physical network ports into a single logical channel. ONTAP Select can work with port groups that are configured as a Link Aggregation Group (LAG). NetApp recommends using the individual physical ports as simple uplink (trunk) ports, avoiding the LAG configuration.</p>
-</div>
-<div class="paragraph">
-<p>Because the performance of the ONTAP Select VM is tied directly to the characteristics of the underlying hardware, increasing the throughput to the VM by selecting 10Gb-capable NICs results in a higher-performing cluster and a better overall user experience. When cost or form factor prevents the user from designing a system with four 10Gb NICs, two 10Gb NICs can be used. There are a number of other configurations that are also supported. For two-node clusters, 4 x 1Gb ports or 1 x 10Gb ports are supported. For single node clusters, 2 x 1Gb ports are supported.</p>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="network-configuration-best-practices">Network configuration best practices</h3>
-<div class="paragraph">
-<p>For both standard and distributed vSwitches, consider the best practices listed in the following table:</p>
-</div>
-<div class="paragraph">
-<p><strong>Network configuration support matrix</strong></p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Server Environment</th>
-<th class="tableblock halign-left valign-top">Select Configuration</th>
-<th class="tableblock halign-left valign-top">Best Practices</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Standard or distributed vSwitch<br>
-4 x 10Gb ports or<br>
-4 x 1Gb ports<br>
-The physical uplink switch does not support or is not configured for LACP and supports large MTU size on all ports.<sup>1</sup></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Do not use any LACP channels.<br>
-All the ports must be owned by the same vSwitch. The vSwitch must support a large MTU size.<sup>1</sup></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Up to four port groups are supported, two for the internal network and two for the external network. For best performance, all four port groups should be used.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The load-balancing policy at the port-group level is Route Based on Originating Virtual Port ID.<br>
-VMware recommends that STP be set to Portfast on the switch ports connected to the ESXi hosts.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Standard or distributed vSwitch<br>
-2 x 10Gb ports<br>
-The physical uplink switch does not support or is not configured for LACP and supports large MTU size on all ports.<sup>1</sup></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Do not use any LACP channels.<br>
-The internal network must use a port group with 1 x 10Gb active and 1 x 10Gb standby.<sup>1</sup><br>
-The external network uses a separate port group. The active port is the standby port for the internal port group. The standby port is the active port for the internal network port group.<br>
-All the ports must be owned by the same vSwitch. The vSwitch must support a large MTU size.<sup>1</sup></p></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p><sup>1</sup> The internal network supports an MTU size between 7,500 and 9,000.</p>
+<p>Because the performance of the ONTAP Select VM is tied directly to the characteristics of the underlying hardware, increasing the throughput to the VM by selecting higher-speed NICs results in a higher-performing cluster and a better overall user experience. Four 10Gb NICs or two higher-speed NICs (25/40 Gb/s) can be used to achieve a high performance network layout. There are a number of other configurations that are also supported. For two-node clusters, 4 x 1Gb ports or 1 x 10Gb ports are supported. For single node clusters, 2 x 1Gb ports are supported.</p>
 </div>
 <div class="paragraph">
 <p><strong>Network minimum and recommended configurations</strong></p>
@@ -2048,14 +2002,14 @@ All the ports must be owned by the same vSwitch. The vSwitch must support a larg
 <td class="tableblock halign-left valign-top"><p class="tableblock">2 x 10Gb</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Two node clusters / Metrocluster SDS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Two node clusters/MetroCluster SDS</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">4 x 1Gb or 1 x 10Gb</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">2 x 10Gb</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">4/6/8 node clusters</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">2 x 10Gb</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">4 x 10Gb</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4 x 10Gb or 2 x 25/40Gb</p></td>
 </tr>
 </tbody>
 </table>
@@ -2065,7 +2019,6 @@ When sufficient hardware is available, NetApp recommends using the multiswitch c
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="./media/BP_02.jpg" alt="Network configuration using multiple physical switches"></span></p>
-</div>
 </div>
 
     </article>
